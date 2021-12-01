@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конкурс на самое безбашенное путешествие с Пинк</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="page__body">
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="img/logo-mobile-header.svg" width="74" height="23" alt="Логотип приложения PINK">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--current"><a>Главная</a></li>
+            <li class="site-list__item"><a href="catalog.html">Фотографии</a></li>
+            <li class="site-list__item"><a href="form.html">Конкурс</a></li>
+            <li class="site-list__item"><a href="#">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Форма для заполнения для участия в конкурсе от PINK</h1>
+
+    <section class="top-section">
+      <h2 class="visually-hidden">Что за конкурс?</h2>
+      <p class="top-section__text text-block text-block--large">Конкурс на самое безбашенное путешествие с Пинк</p>
+    </section>
+
+    <section class="form">
+      <h2 class="visually-hidden">Заполните следующую форму</h2>
+      <div class="form__wrapper">
+        <form method="post">
+
+          <p class="form__text text-block">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
+            вашу бонусную карту!</p>
+          <label class="form__lable" for="last-name">Фамилия:</label>
+          <input class="form__input form__input--text" name="last-name" type="text" id="last-name"
+            placeholder="Укажите фамилию *" required>
+          <label class="form__lable" for="name">Имя:</label>
+          <input class="form__input form__input--text" name="name" type="text" id="name"
+            placeholder="Введите ваше имя *" required>
+          <label class="form__lable" for="surname">Отчество:</label>
+          <input class="form__input form__input--text" name="surname" type="text" id="surname"
+            placeholder="Ну и отчество тоже">
+
+          <fieldset class="form__fieldset">
+            <legend class="form__lable">Ваши безбашенные достижения в путешествии</legend>
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox" checked>Сделал селфи с
+            акулой
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox" checked>Обгорел на пляже
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox">Видел Чака Норриса
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox">Накупил сувениров
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox" checked>Удержал башню
+            <input class="form__input form__input--checkbox" name="checkbox" type="checkbox">Разгромил отель
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__lable">Контактная информация</legend>
+            <label class="form__lable" for="tel">Номер телефона</label>
+            <input class="form__input form__input--tel" name="tel" type="tel" id="tel" placeholder="Номер, пожалуйста">
+            <label class="form__lable" for="email">Адрес почты</label>
+            <input class="form__input form__input--email" name="email" type="email" id="email"
+              placeholder="Введите почту *" required>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__lable">С каким приложением путешествовали?</legend>
+            <label><input class="form__input form__input--radio" name="radio" value="ios" type="radio" checked>Pink для
+              iOS</label>
+            <label><input class="form__input form__input--radio" name="radio" value="android" type="radio">Pink на
+              Android</label>
+            <label><input class="form__input form__input--radio" name="radio" value="windows" type="radio">Windows
+              Phone</label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__lable">Опишите свои эмоции</legend>
+            <textarea class="form__textarea" name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </fieldset>
+
+          <input name="form__input button button--square" value="Отправить форму">
+
+          <p form__text form__text--upper text-block>* — обязательные поля</p>
+        </form>
+      </div>
+    </section>
+
+    <div class="popup-failure popup">
+      <div class="popup-failure__wrapper">
+        <h2 class="popup__title">Что-то пошло не так!</h2>
+        <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="popup__button button button--square">Ок</button>
+      </div>
+    </div>
+
+    <div class="popup-success popup">
+      <div class="popup-success__wrapper">
+        <h2 class="popup__title">Ваша заявка отправлена</h2>
+        <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим
+          ее и оповестим вас.</p>
+        <div class="popup-success__btn-block">
+          <button class="popup__button button button--square">Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/">Мы на Ютубе</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/htmlacademy-pink.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
