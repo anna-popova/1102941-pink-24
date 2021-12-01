@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Галерея фотографий пользователей</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -33,14 +34,14 @@
 
     <section class="top-section">
       <h2 class="visually-hidden">Галерея фотографий пользователей</h2>
-      <p class="top-section__text text-block--large">Фотографии пользователей</p>
+      <p class="top-section__text text-block text-block--large">Фотографии пользователей</p>
     </section>
 
     <section class="gallery">
       <div class="gallery__wrapper">
         <h2 class="visually-hidden">Галерея фотографий пользователей</h2>
-        <p class="gallery__text text-block">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не
-          хватает ваших?</p>
+        <p class="gallery__text text-block">Взгляните на фотографии, которые выкладывают пользователи! Видите, как
+          не хватает ваших?</p>
 
         <div class="gallery__list">
 
@@ -252,6 +253,7 @@
     </section>
 
     <section class="new-post">
+      <h2 class="visually-hidden">Отредактировать и опубликовать фото</h2>
       <div class="new-post__wrapper">
 
         <div class="new-post__img-block">
@@ -278,14 +280,27 @@
         </div>
 
         <div class="new-post__range-block range-block">
-          <input class="range-block__runner range-block__runner--size" type="range" min="0" max="100" step="1"
-            value="50">
-          <!--исп для tablet и desktop>
-          <input class="range-block__runner range-block__runner--fill" type="range" min="0" max="100" step="1"
-            value="50">
-          <input class="range-block__runner range-block__runner--contrast" type="range" min="0" max="100" step="1"
-            value="50">
-          -->
+          <div class="range-block__list">
+
+            <div class="range-block__item range-block__item--current">
+              <img src="img/size-icon.svg" width="16" height="16" alt="Корректировать размер фотографии">
+              <input class="range-block__runner range-block__runner--size" type="range" min="0" max="100" step="1"
+                value="50">
+            </div>
+
+            <div class="range-block__item">
+              <img src="img/fill-icon.svg" width="24" height="22" alt="Корректировать заливку фотографии">
+              <input class="range-block__runner range-block__runner--fill" type="range" min="0" max="100" step="1"
+                value="50">
+            </div>
+
+            <div class="range-block__item">
+              <img src="img/contrast-icon.svg" width="16" height="16" alt="Корректировать контраст фотографии">
+              <input class="range-block__runner range-block__runner--contrast" type="range" min="0" max="100" step="1"
+                value="50">
+            </div>
+
+          </div>
         </div>
 
         <div class="new-post__buttons">
@@ -294,33 +309,34 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <a class="page-footer__logo">
-          <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
-        </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/">Мы на Ютубе</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy-pink.svg" width="27" height="34" alt="HTML Academy">
-          </a>
-        </div>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/">Мы на Ютубе</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/htmlacademy-pink.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 

@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приложение для работы с фотографиями PINK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body class="page__body">
@@ -35,7 +37,7 @@
     <section class="download">
       <div class="download__wrapper">
         <h2 class="visually-hidden">Скачайте приложение PINK</h2>
-        <p class="download__text-block text-block--large">Взгляните на жизнь иначе!</p>
+        <p class="download__text-block text-block text-block--large">Взгляните на жизнь иначе!</p>
         <button class="download__button button button--round" type="button">Скачать приложение</button>
         <ul class="device-list">
           <li class="device-list__item"><span class="visually-hidden">Apple</span></li>
@@ -51,8 +53,8 @@
     <section class="benefits">
       <div class="benefits__wrapper">
         <h2 class="visually-hidden">Преимущества приложения PINK</h2>
-        <p class="benefits__text-block text-block--large">Устали от серости мегаполиса?</p>
-        <p class="benefits__text-block text-block--large">Нам есть, что вам предложить!</p>
+        <p class="benefits__text-block text-block text-block--large">Устали от серости мегаполиса?</p>
+        <p class="benefits__text-block text-block text-block--large">Нам есть, что вам предложить!</p>
         <dl class="benefits__list">
           <div class="benefits__item benefits__item--mood">
             <dt class="benefits__title">Поднимает настроение</dt>
@@ -110,116 +112,90 @@
     <section class="tariffs">
       <div class="tariffs__wrapper slider">
         <h2 class="visually-hidden">Тарифы и цены</h2>
-        <div class="tariffs__list slider__list">
-          <div class="tariffs__item slider__item">
-            <div class="tariffs__line tariffs__line--top">
+
+        <table class="tariffs__table">
+          <tr class="tariffs__row">
+            <!--первая строка-->
+            <th class="tariffs__header"><span class="visually-hidden">Составляющие тарифа</span></th>
+            <th class="tariffs__header">
               <p class="tariffs__name">База</p>
               <p class="tariffs__price">1,99 USD</p>
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Смайлики</span>
-              <img src="img/no.svg" width="27" height="27" alt="Нет">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Розовый фильтр</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Комментарии</span>
-              <img src="img/no.svg" width="27" height="27" alt="Нет">
-            </div>
-          </div>
-          <div class="tariffs__item slider__item--current">
-            <div class="tariffs__line line tariffs__line--top">
+            </th>
+            <th class="tariffs__header">
               <p class="tariffs__hit">Хит</p>
               <p class="tariffs__name">Стандарт</p>
               <p class="tariffs__price">3,99 USD</p>
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Смайлики</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Розовый фильтр</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Комментарии</span>
-              <img src="img/no.svg" width="27" height="27" alt="Нет">
-            </div>
-          </div>
-          <div class="tariffs__item slider__item">
-            <div class="tariffs__line tariffs__line--top">
+            </th>
+            <th class="tariffs__header">
               <p class="tariffs__name">Анлим</p>
               <p class="tariffs__price">9,99 USD</p>
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Смайлики</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Розовый фильтр</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-            <div class="tariffs__line">
-              <span class="tariffs__component">Комментарии</span>
-              <img class="tariffs__icon" src="img/yes.svg" width="31" height="21" alt="Есть">
-            </div>
-          </div>
-        </div>
+            </th>
+          </tr>
+
+          <tr class="tariffs__row">
+            <!--вторая строка-->
+            <td class="tariffs__data tariffs__data--text">Розовый фильтр</td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Розовый фильтр</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Розовый фильтр</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Розовый фильтр</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+          </tr>
+
+          <tr class="tariffs__row">
+            <!--третья строка-->
+            <td class="tariffs__data tariffs__data--text">Смайлики</td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Смайлики</span>
+              <img src="img/no.svg" width="27" height="27" alt="Нет">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Смайлики</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Смайлики</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+          </tr>
+
+          <tr class="tariffs__row">
+            <!--четвертая строка-->
+            <td class="tariffs__data tariffs__data--text">Комментарии</td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Комментарии</span>
+              <img src="img/no.svg" width="27" height="27" alt="Нет">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Комментарии</span>
+              <img src="img/no.svg" width="27" height="27" alt="Нет">
+            </td>
+            <td class="tariffs__data tariffs__data--yes">
+              <span class="tariffs__include">Комментарии</span>
+              <img src="img/yes.svg" width="31" height="21" alt="Есть">
+            </td>
+          </tr>
+        </table>
+
         <p class="tariffs__toggles slider__toggles">
           <button class="slider__toggle" type="button">1</button>
           <button class="slider__toggle slider__toggle--current" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
         </p>
-        <!--
-        !сверстала таблицу, а потом поняла, что для слайдера она не очень подходит.
-        !решила не удалять, чтобы потом не пришлось заново это делать, если понадобится.
-        !сделала отдельную верстку для слайдера. не очень понимаю, как вообще этот блок реализовать.
-        !возможно, для этого нужна будет консультация.
-      <table class="tariffs__table">
-        <tr class="tariffs__row">
-          <th class="tariffs__header"><span class="visually-hidden">Составляющие тарифа</span></th>
-          <th class="tariffs__header">
-            <p class="tariffs__name">База</p>
-            <p class="tariffs__price">1,99 USD</p>
-          </th>
-          <th class="tariffs__header">
-            <p class="tariffs__hit">Хит</p>
-            <p class="tariffs__name">Стандарт</p>
-            <p class="tariffs__price">3,99 USD</p>
-          </th>
-          <th class="tariffs__header">
-            <p class="tariffs__name">Анлим</p>
-            <p class="tariffs__price">9,99 USD</p>
-          </th>
-        </tr>
-        <tr class="tariffs__row">
-          <td class="tariffs__data tariffs__data--text">Розовый фильтр</td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-        </tr>
-        <tr class="tariffs__row">
-          <td class="tariffs__data tariffs__data--text">Смайлики</td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/no.svg" width="27" height="27" alt="Нет"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-        </tr>
-        <tr class="tariffs__row">
-          <td class="tariffs__data tariffs__data--text">Комментарии</td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/no.svg" width="27" height="27" alt="Нет"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/no.svg" width="27" height="27" alt="Нет"></td>
-          <td class="tariffs__data tariffs__data--yes"><img src="img/yes.svg" width="31" height="21" alt="Есть"></td>
-        </tr>
-      </table>
-      -->
+
       </div>
     </section>
 
     <section class="contacts">
       <div class="contacts__wrapper">
-        <p class="contacts__text-block text-block--large">Остались вопросы? Свяжитесь с нами!</p>
+        <p class="contacts__text-block text-block text-block--large">Остались вопросы? Свяжитесь с нами!</p>
 
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -265,7 +241,7 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="img/htmlacademy-pink.svg" width="27" height="34" alt="HTML Academy">
         </a>
