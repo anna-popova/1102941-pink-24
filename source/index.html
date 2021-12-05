@@ -14,9 +14,14 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
-        <img src="img/logo-mobile-header.svg" width="74" height="23" alt="Логотип приложения PINK">
+        <picture>
+          <source srcset="img/logo-mobile-header.svg" media="(max-width: @mobile-width-only)">
+          <source srcset="img/logo-tablet-header.svg" media="(min-width: @tablet-width)">
+          <source srcset="img/logo-dektop-header.svg" media="(min-width: @desktop-width)">
+          <img class="page-header__img" src="img/logo-dektop-header.svg" alt="Логотип приложения PINK">
+        </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
@@ -42,7 +47,7 @@
         </div>
 
         <div class="download__button-block">
-          <button class="button button--round button--white" type="button">Скачать приложение</button>
+          <button class="download__button button button--round button--white" type="button">Скачать приложение</button>
           <ul class="device-list">
             <li class="device-list__item device-list__item--apple"><span class="visually-hidden">Apple</span></li>
             <li class="device-list__item device-list__item--android"><span class="visually-hidden">Android</span></li>
@@ -61,27 +66,41 @@
         <h2 class="visually-hidden">Преимущества приложения PINK</h2>
         <div class="benefits__text-block">
           <p class="benefits__text">Устали от серости мегаполиса?</p>
-          <p class="benefits__text">Нам есть, что вам предложить!</p>
+          <p class="benefits__text">Нам есть, что вам<br> предложить!</p>
         </div>
-        <dl class="benefits__list">
-          <div class="benefits__item benefits__item--mood">
-            <dt class="benefits__title">Поднимает настроение</dt>
-            <dd class="benefits__description">Приложение позволит вам победить осеннюю хандру и депрессию
-              буквально в несколько кликов!</dd>
-          </div>
-          <div class="benefits__item benefits__item--world-around">
-            <dt class="benefits__title">Меняет мир вокруг</dt>
-            <dd class="benefits__description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
-              чтобы усилить эффект</dd>
-          </div>
-          <div class="benefits__item benefits__item--friends">
-            <dt class="benefits__title">Заводит новых друзей</dt>
-            <dd class="benefits__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
-              заводите новых</dd>
-          </div>
-        </dl>
+        <div class="benefits__list-block">
+          <dl class="benefits__list">
+            <div class="benefits__item benefits__item--mood">
+              <dt class="benefits__title">Поднимает настроение</dt>
+              <dd class="benefits__description">Приложение позволит вам победить осеннюю хандру и депрессию
+                буквально в несколько кликов!</dd>
+            </div>
+            <div class="benefits__item benefits__item--world-around">
+              <dt class="benefits__title">Меняет мир вокруг</dt>
+              <dd class="benefits__description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
+                чтобы усилить эффект</dd>
+            </div>
+            <div class="benefits__item benefits__item--friends">
+              <dt class="benefits__title">Заводит новых друзей</dt>
+              <dd class="benefits__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите новых</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <article class="article">
+      <div class="article__wrapper">
+        <h2 class="visually-hidden">Статья об исследовании британских ученых</h2>
+        <div class="article__text-block">
+          <p class="article__title">Эффект на 24 часа!</p>
+          <p class="article__text">Британские ученые провели исследования и доказали, что положительный эффект от
+            использования приложения длится целые сутки!</p>
+          <p class="article__text"><a class="article__link" href="#">Узнать больше об исследовании</a></p>
+        </div>
+      </div>
+    </article>
 
     <section class="reviews">
       <div class="reviews__wrapper slider">

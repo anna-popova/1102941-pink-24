@@ -1,12 +1,26 @@
 .tariffs {
+  position: relative;
   background-color: @gray;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 30px; // высота скошенного края
+    background: black; // цвет скошенного края
+    background: linear-gradient(to top left, @gray 50%, rgba(255,0,0,0) 52%);
+    transform: translateY(-100%); // сдвигаем вверх на 30 пикселей
+  }
 }
 .tariffs__wrapper {
   padding-top: 90px;
   padding-bottom: 50px;
 }
 .tariffs__table {
-  margin-bottom: 45px;
+  margin: 0 auto 45px auto;
+  border: 2px solid @gray;
 }
 .tariffs__row {
   background-color: @white;
