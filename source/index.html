@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приложение для работы с фотографиями PINK</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
@@ -15,13 +14,18 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo">
-        <img src="img/logo-mobile-header.svg" width="74" height="23" alt="Логотип приложения PINK">
+        <picture>
+          <source srcset="img/logo-mobile-header.svg" media="(max-width: @mobile-width-only)">
+          <source srcset="img/logo-tablet-header.svg" media="(min-width: @tablet-width)">
+          <source srcset="img/logo-dektop-header.svg" media="(min-width: @desktop-width)">
+          <img class="page-header__img" src="img/logo-dektop-header.svg" alt="Логотип приложения PINK">
+        </picture>
       </a>
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current"><a>Главная</a></li>
+            <li class="site-list__item site-list__item--current"><a href="#">Главная</a></li>
             <li class="site-list__item"><a href="catalog.html">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
             <li class="site-list__item"><a href="#">HTML Academy</a></li>
@@ -37,52 +41,75 @@
     <section class="download">
       <div class="download__wrapper">
         <h2 class="visually-hidden">Скачайте приложение PINK</h2>
-        <p class="download__text-block text-block text-block--large">Взгляните на жизнь иначе!</p>
-        <button class="download__button button button--round" type="button">Скачать приложение</button>
-        <ul class="device-list">
-          <li class="device-list__item"><span class="visually-hidden">Apple</span></li>
-          <li class="device-list__item"><span class="visually-hidden">Android</span></li>
-          <li class="device-list__item"><span class="visually-hidden">Microsoft</span></li>
-        </ul>
-        <p class="download__text-block text-block">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+
+        <div class="download__top-block">
+          <p class="download__text-block">Взгляните на жизнь иначе!</p>
+        </div>
+
+        <div class="download__button-block">
+          <button class="download__button button button--round button--white" type="button">Скачать приложение</button>
+          <ul class="device-list">
+            <li class="device-list__item device-list__item--apple"><span class="visually-hidden">Apple</span></li>
+            <li class="device-list__item device-list__item--android"><span class="visually-hidden">Android</span></li>
+            <li class="device-list__item device-list__item--micrisoft"><span class="visually-hidden">Microsoft</span>
+            </li>
+          </ul>
+          <p class="download__text-block download__text-block--smaller">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="benefits">
       <div class="benefits__wrapper">
         <h2 class="visually-hidden">Преимущества приложения PINK</h2>
-        <p class="benefits__text-block text-block text-block--large">Устали от серости мегаполиса?</p>
-        <p class="benefits__text-block text-block text-block--large">Нам есть, что вам предложить!</p>
-        <dl class="benefits__list">
-          <div class="benefits__item benefits__item--mood">
-            <dt class="benefits__title">Поднимает настроение</dt>
-            <dd class="benefits__text text-block">Приложение позволит вам победить осеннюю хандру и депрессию
-              буквально в несколько кликов!</dd>
-          </div>
-          <div class="benefits__item benefits__item--world-around">
-            <dt class="benefits__title">Меняет мир вокруг</dt>
-            <dd class="benefits__text text-block">Сделайте снимок и украсьте его смайликом или текстовой подписью,
-              чтобы усилить эффект</dd>
-          </div>
-          <div class="benefits__item benefits__item--friends">
-            <dt class="benefits__title">Заводит новых друзей</dt>
-            <dd class="benefits__text text-block">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
-              заводите новых</dd>
-          </div>
-        </dl>
+        <div class="benefits__text-block">
+          <p class="benefits__text">Устали от серости мегаполиса?</p>
+          <p class="benefits__text">Нам есть, что вам<br> предложить!</p>
+        </div>
+        <div class="benefits__list-block">
+          <dl class="benefits__list">
+            <div class="benefits__item benefits__item--mood">
+              <dt class="benefits__title">Поднимает настроение</dt>
+              <dd class="benefits__description">Приложение позволит вам победить осеннюю хандру и депрессию
+                буквально в несколько кликов!</dd>
+            </div>
+            <div class="benefits__item benefits__item--world-around">
+              <dt class="benefits__title">Меняет мир вокруг</dt>
+              <dd class="benefits__description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
+                чтобы усилить эффект</dd>
+            </div>
+            <div class="benefits__item benefits__item--friends">
+              <dt class="benefits__title">Заводит новых друзей</dt>
+              <dd class="benefits__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите новых</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
+
+    <article class="article">
+      <div class="article__wrapper">
+        <h2 class="visually-hidden">Статья об исследовании британских ученых</h2>
+        <div class="article__text-block">
+          <p class="article__title">Эффект на 24 часа!</p>
+          <p class="article__text">Британские ученые провели исследования и доказали, что положительный эффект от
+            использования приложения длится целые сутки!</p>
+          <p class="article__text"><a class="article__link" href="#">Узнать больше об исследовании</a></p>
+        </div>
+      </div>
+    </article>
 
     <section class="reviews">
       <div class="reviews__wrapper slider">
         <h2 class="visually-hidden">Отзывы о приложении PINK</h2>
         <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item--current">
+          <blockquote class="reviews__item slider__item slider__item--current">
             <cite class="reviews__autor-name">Николай Петров</cite>
-            <p class="reviews__autor-information visually-hidden">25 лет, водитель трамвая</p>
-            <p class="reviews__text text-block">«Это приложение перевернуло мой мир и позволило по-новому
+            <p class="reviews__autor-information">25 лет, водитель трамвая</p>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому
               взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к
               выложенной
               фотографии!»
@@ -91,15 +118,15 @@
           <blockquote class="reviews__item slider__item">
             <cite class="reviews__autor-name">Сергей Попов</cite>
             <p class="reviews__autor-information visually-hidden">26 лет, повар</p>
-            <p class="reviews__text text-block">«Отличное приожение!»</p>
+            <p class="reviews__text">«Отличное приожение!»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
             <cite class="reviews__autor-name">Роман Иванов</cite>
             <p class="reviews__autor-information visually-hidden">27 лет, музыкант</p>
-            <p class="reviews__text text-block">«Ничего лучше для меня нет!»</p>
+            <p class="reviews__text">«Ничего лучше для меня нет!»</p>
           </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+          <button class="reviews__btn reviews__btn--prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__btn reviews__btn--next" type="button">Следующий отзыв</button>
         </div>
         <p class="reviews__toggles slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button">1</button>
@@ -116,12 +143,13 @@
         <table class="tariffs__table">
           <tr class="tariffs__row">
             <!--первая строка-->
-            <th class="tariffs__header"><span class="visually-hidden">Составляющие тарифа</span></th>
+            <th class="tariffs__header tariffs__header--hidden"><span class="visually-hidden">Составляющие тарифа</span>
+            </th>
             <th class="tariffs__header">
               <p class="tariffs__name">База</p>
               <p class="tariffs__price">1,99 USD</p>
             </th>
-            <th class="tariffs__header">
+            <th class="tariffs__header tariffs__header--displayed">
               <p class="tariffs__hit">Хит</p>
               <p class="tariffs__name">Стандарт</p>
               <p class="tariffs__price">3,99 USD</p>
@@ -139,7 +167,7 @@
               <span class="tariffs__include">Розовый фильтр</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
               <span class="tariffs__include">Розовый фильтр</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
@@ -156,7 +184,7 @@
               <span class="tariffs__include">Смайлики</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
               <span class="tariffs__include">Смайлики</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
@@ -173,7 +201,7 @@
               <span class="tariffs__include">Комментарии</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
               <span class="tariffs__include">Комментарии</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
@@ -195,7 +223,7 @@
 
     <section class="contacts">
       <div class="contacts__wrapper">
-        <p class="contacts__text-block text-block text-block--large">Остались вопросы? Свяжитесь с нами!</p>
+        <p class="contacts__text-block">Остались вопросы? Свяжитесь с нами!</p>
 
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -230,18 +258,21 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/">Мы в Твиттере</a>
+            <a class="social__link social__link--twitter" href="https://twitter.com/"><span class="visually-hidden">Мы в
+                Твиттере</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/"><span
+                class="visually-hidden">Мы в Фейсбуке</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/">Мы на Ютубе</a>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/"><span
+                class="visually-hidden">Мы на Ютубе</span></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
+        <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="img/htmlacademy-pink.svg" width="27" height="34" alt="HTML Academy">
         </a>

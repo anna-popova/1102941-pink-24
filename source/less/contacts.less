@@ -1,0 +1,87 @@
+.contacts {
+}
+.contacts__wrapper {
+  padding-top: 50px;
+}
+.contacts__text-block {
+  width: 85%;
+  margin: 0 auto 45px auto;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: @blue;
+  text-transform: uppercase;
+}
+.contacts__list {
+  width: 85%;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+.contacts__item {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contacts__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: @blue;
+}
+.contacts__text {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: @pink;
+  & a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+  &:hover {
+    color: @blue;
+    text-decoration: underline;
+  }
+  &:active {
+    color: @blue-down;
+    text-decoration: none;
+  }
+  }
+}
+.contacts__map {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  & iframe {
+    width: 100%;
+    height: 100%;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50%;
+    height: 50px; // высота скошенного края
+    background: #ffffff; // цвет скошенного края
+    background: linear-gradient(to top right, #ffffff 50%, rgba(255,0,0,0) 52%);
+    transform: rotate(180deg);
+
+}
+&::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50%;
+  height: 50px; // высота скошенного края
+  background: #ffffff; // цвет скошенного края
+  background: linear-gradient(to top left, #ffffff 50%, rgba(255,0,0,0) 52%);
+  transform: rotate(180deg);
+
+}
+}

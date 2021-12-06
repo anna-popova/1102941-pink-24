@@ -1,0 +1,40 @@
+.site-list {
+  background-color: @blue;
+  @media screen and (min-width: @desktop-width) {
+    display: flex;
+    background-color: transparent;
+  }
+}
+.site-list__item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 0px 1px 0px #000000,
+              inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+  @media screen and (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+    margin-right: 78px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & a {
+    font-size: 18px;
+    font-weight: 700;
+    color: @white;
+    text-transform: uppercase;
+    &:hover {
+      color: @pink;
+    }
+    &:active {
+      color: @white-down;
+    }
+    @media screen and (min-width: @desktop-width) {
+      font-weight: 400;
+      text-transform: none;
+    }
+  }
+}
+.site-list__item--current {
+}

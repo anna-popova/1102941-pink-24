@@ -1,0 +1,70 @@
+.button {
+  display: block;
+  width: 87%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  outline: none;
+}
+.button--round {
+  background-color: transparent;
+  border-radius: 29px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.button--white {
+  border: 3px solid @white;
+  color: @white;
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+  &:active {
+    color: @pink-down;
+    background-color: @white;
+  }
+}
+.button--square {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: @white;
+  background-color: rgb(42, 171, 109);
+  border: 2px solid #2AAB6D;
+  border-radius: 1px;
+  &:hover {
+    background-color: rgb(28, 155, 94);
+    border-color: rgb(28, 155, 94);
+  }
+  &:active {
+    color: @white-down;
+    background-color: rgb(28, 155, 94);
+    border-color: rgb(28, 155, 94);
+  }
+}
+.button--pink {
+  border: 3px solid @pink;
+  color: @pink;
+  &:hover {
+    background-color: @pink;
+    color: @white;
+  }
+  &:active {
+    background-color: @pink;
+    color: @white-down;
+  }
+}
+.button--gray {
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  color: rgba(40, 54, 69, 0.1);
+  &:hover {
+    color: @blue-down;
+    border-color: @blue-down;
+  }
+  &:active {
+    color: @white-down;
+    background-color: @blue-down;
+    border-color: @blue-down;
+  }
+}
