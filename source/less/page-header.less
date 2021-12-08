@@ -8,21 +8,36 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 66px;
+  height: 66px;
   padding-right: 20px;
   @media screen and (min-width: @tablet-width) {
-    min-height: 110px;
+    height: 110px;
   }
   @media screen and (min-width: @desktop-width) {
     padding-right: 130px;
   }
 }
+.page-header__wrapper--bg {
+  background-color: @blue;
+}
 .page-header__logo {
   position: absolute;
   display: block;
   left: 20px;
+  @media screen and (max-width: @mobile-width-only) {
+    width: 74px;
+    height: 23px;
+    background: url("../img/logo-mobile-header.svg") no-repeat center center;
+  }
+  @media screen and (min-width: @tablet-width) {
+    width: 145px;
+    height: 40px;
+    background: url("../img/logo-tablet-header.svg") no-repeat center center;
+  }
   @media screen and (min-width: @desktop-width) {
     left: 130px;
+    width: 147px;
+    background: url("../img/logo-dektop-header.svg") no-repeat center center;
   }
 }
 .page-header__img {

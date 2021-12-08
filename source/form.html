@@ -12,14 +12,14 @@
 <body class="page__body">
 
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile-header.svg" width="74" height="23" alt="Логотип приложения PINK">
+    <div id="page-header" class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html"><span class="visually-hidden">Логотип приложения PINK</span>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="page-header__nav main-nav">
+        <button id="nav-btn" class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
+            меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul id="main-nav" class="main-nav__list site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
             <li class="site-list__item"><a href="catalog.html">Фотографии</a></li>
             <li class="site-list__item site-list__item--current"><a href="#">Конкурс</a></li>
@@ -41,24 +41,30 @@
     <section class="form">
       <h2 class="visually-hidden">Заполните следующую форму</h2>
       <div class="form__wrapper">
-        <form method="post">
+        <form method="post" class="form__form-application">
 
           <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
-            вашу бонусную карту!</p>
+            вашу бонусную карту! <span class="form__text--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
 
           <div class="form__name-block">
-            <label class="form__lable form__lable--indent" for="last-name">Фамилия:</label>
-            <input class="form__input form__input--text" name="last-name" type="text" id="last-name"
-              placeholder="Укажите фамилию *" required>
-            <label class="form__lable form__lable--indent" for="name">Имя:</label>
-            <input class="form__input form__input--text" name="name" type="text" id="name"
-              placeholder="Введите ваше имя *" required>
-            <label class="form__lable form__lable--indent" for="surname">Отчество:</label>
-            <input class="form__input form__input--text" name="surname" type="text" id="surname"
-              placeholder="Ну и отчество тоже">
+            <div class="form__name-inner-block">
+              <label class="form__lable form__lable--indent" for="last-name">Фамилия:</label>
+              <input class="form__input form__input--text" name="last-name" type="text" id="last-name"
+                placeholder="Укажите фамилию *" required>
+            </div>
+            <div class="form__name-inner-block">
+              <label class="form__lable form__lable--indent" for="name">Имя:</label>
+              <input class="form__input form__input--text" name="name" type="text" id="name"
+                placeholder="Введите ваше имя *" required>
+            </div>
+            <div class="form__name-inner-block">
+              <label class="form__lable form__lable--indent" for="surname">Отчество:</label>
+              <input class="form__input form__input--text" name="surname" type="text" id="surname"
+                placeholder="Ну и отчество тоже">
+            </div>
           </div>
 
-          <fieldset class="form__fieldset form__fieldset--gray">
+          <fieldset class="form__fieldset form__fieldset--gray form__fieldset--achieve">
             <legend class="form__lable form__lable--mobile-hidden">Ваши безбашенные достижения в путешествии</legend>
             <label class="form__lable form__lable--mobile">Ваши безбашенные достижения в путешествии</label>
             <div class="form__input-container">
@@ -87,16 +93,21 @@
             </div>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--contacts">
             <legend class="form__lable form__lable--mobile-hidden">Контактная информация</legend>
-            <label class="form__lable form__lable--indent" for="tel">Номер телефона</label>
-            <input class="form__input form__input--text" name="tel" type="tel" id="tel" placeholder="Номер, пожалуйста">
-            <label class="form__lable form__lable--indent" for="email">Адрес почты</label>
-            <input class="form__input form__input--text" name="email" type="email" id="email"
-              placeholder="Введите почту *" required>
+            <div class="form__contacts-block">
+              <label class="form__lable form__lable--indent form__lable--tel" for="tel">Номер телефона</label>
+              <input class="form__input form__input--text form__input--tel" name="tel" type="tel" id="tel"
+                placeholder="Номер, пожалуйста">
+            </div>
+            <div class="form__contacts-block">
+              <label class="form__lable form__lable--indent form__lable--email" for="email">Адрес почты</label>
+              <input class="form__input form__input--text form__input--email" name="email" type="email" id="email"
+                placeholder="Введите почту *" required>
+            </div>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset--gray">
+          <fieldset class="form__fieldset form__fieldset--gray form__fieldset--app">
             <legend class="form__lable form__lable--mobile-hidden">С каким приложением путешествовали?</legend>
             <label class="form__lable form__lable--mobile">С каким приложением путешествовали?</label>
             <label><input class="form__input form__input--radio" name="radio" value="ios" type="radio" checked>
@@ -110,22 +121,25 @@
             </label>
           </fieldset>
 
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--emotion">
             <legend class="form__lable form__lable--mobile-hidden">Опишите свои эмоции</legend>
             <label class="form__lable form__lable--mobile">Опишите свои эмоции</label>
             <textarea class="form__textarea form__input--text"
               name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
 
-          <input class="form__button button button--square" value="Отправить форму">
+          <div class="form__bottom-block">
+            <input class="form__button button button--square" value="Отправить форму">
+            <p class="form__text form__text--upper">
+              <span class="form__text form__text--pink">*</span> — обязательные поля
+            </p>
+          </div>
 
-          <p class="form__text form__text--upper"><span class="form__text form__text--pink">*</span> — обязательные поля
-          </p>
         </form>
       </div>
     </section>
 
-    <div class="popup">
+    <div class="popup popup--fault">
       <div class="popup__wrapper">
         <div class="popup__text-block popup__text-block--fault">
           <h2 class="popup__title">Что-то пошло не так!</h2>
@@ -137,12 +151,12 @@
       </div>
     </div>
 
-    <div class="popup">
+    <div class="popup popup--success">
       <div class="popup__wrapper">
         <div class="popup__text-block popup__text-block--success">
           <h2 class="popup__title">Ваша заявка отправлена</h2>
           <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы
-            рассмотрим ее и<br> оповестим вас.</p>
+            рассмотрим ее и оповестим вас.</p>
         </div>
 
         <div class="popup__btn-block popup__btn-block--gray">
@@ -155,8 +169,8 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo">
-        <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
+      <a class="page-footer__logo" href="index.html">
+        <span class="visually-hidden">Логотип приложения PINK</span>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -182,6 +196,28 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+      var isOpen = false;
+      var button = document.getElementById("nav-btn");
+      var headerBlock = document.getElementById("page-header");
+      var navBlock = document.getElementById("main-nav");
+      button.addEventListener("click", function (e) {
+        isOpen = !isOpen;
+        if (isOpen) {
+          headerBlock.classList.add("page-header__wrapper--bg");
+          navBlock.classList.add("main-nav__list--open");
+          button.classList.add("main-nav__toggle--close");
+        } else {
+          headerBlock.classList.remove("page-header__wrapper--bg");
+          navBlock.classList.remove("main-nav__list--open");
+          button.classList.remove("main-nav__toggle--close");
+        }
+      }, false);
+    });
+  </script>
 
 </body>
 
