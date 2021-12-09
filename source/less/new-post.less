@@ -1,14 +1,23 @@
 .new-post {
   background-color: rgb(242, 242, 242);
+  @media screen and (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto 28px auto;
+  }
 }
 .new-post__wrapper {
   padding: 20px 20px 40px 20px;
   @media screen and (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
     padding: 55px 20px;
   }
   @media screen and (min-width: @desktop-width) {
+    grid-template-columns: 300px 1fr;
+    column-gap: 90px;
+    padding: 57px 60px 57px 80px;
+    background-color: rgb(242, 242, 242);
   }
 }
 .new-post__img-block {
@@ -51,6 +60,11 @@
     justify-content: flex-end;
     padding-top: 0;
   }
+  @media screen and (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 .new-post__button {
   margin-bottom: 12px;
@@ -60,5 +74,9 @@
   @media screen and (min-width: @tablet-width) {
     max-width: 260px;
     margin-bottom: 24px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    max-width: 183px;
+    margin: 0;
   }
 }

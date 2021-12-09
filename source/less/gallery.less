@@ -1,4 +1,6 @@
 .gallery {
+  @media screen and (min-width: @tablet-width) {
+  }
 }
 .gallery__wrapper {
   padding-top: 54px;
@@ -21,6 +23,10 @@
     font-size: 18px;
     line-height: 1.6;
   }
+  @media screen and (min-width: @desktop-width) {
+    padding-right: 314px;
+    padding-left: 314px;
+  }
 }
 .gallery__text--top {
   margin-bottom: 60px;
@@ -28,6 +34,7 @@
     margin-bottom: 85px;
   }
   @media screen and (min-width: @desktop-width) {
+    margin-bottom: 97px;
   }
 }
 .gallery__list {
@@ -36,7 +43,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    //align-items: stretch;
     margin-bottom: 50px;
   }
   @media screen and (min-width: @desktop-width) {
@@ -48,7 +54,6 @@
     margin-bottom: 0;
   }
   @media screen and (min-width: @tablet-width) {
-    //align-self: stretch;
     width: 300px;
     &:nth-child(2n) {
       margin-right: 20px;
@@ -64,6 +69,12 @@
     }
   }
   @media screen and (min-width: @desktop-width) {
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1260px) {
+    &:nth-child(3n + 4) {
+      margin-right: 20px;
+    }
   }
 }
 .gallery__item--top {
@@ -105,6 +116,7 @@
     height: 300px;
   }
   @media screen and (min-width: @desktop-width) {
+    height: 400px;
   }
 }
 .gallery__img--top {
@@ -113,6 +125,7 @@
     height: 509px;
   }
   @media screen and (min-width: @desktop-width) {
+    height: 506px;
   }
 }
 .gallery__attn {
@@ -132,6 +145,7 @@
     top: 57px;
   }
   @media screen and (min-width: @desktop-width) {
+    right: 130px;
   }
 }
 .gallery__text-block {
@@ -141,6 +155,8 @@
   padding: 26px 10px 26px 17px;
   background-color: rgb(242, 242, 242);
   @media screen and (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
     max-width: 300px;
     min-height: 175px;
     padding: 30px;
@@ -149,15 +165,16 @@
   }
 }
 .gallery__text-block--top {
-  width: 100%;
-  max-width: 620px;
   @media screen and (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    max-width: 620px;
   }
   @media screen and (min-width: @desktop-width) {
+    max-width: 940px;
   }
 }
 .gallery__autor-time {
@@ -198,6 +215,7 @@
   color: @blue;
   margin-bottom: 25px;
   @media screen and (min-width: @tablet-width) {
+    flex-grow: 1;
   }
   @media screen and (min-width: @desktop-width) {
   }
@@ -206,7 +224,6 @@
   @media screen and (min-width: @tablet-width) {
     order: 3;
     width: 100%;
-    margin-top: 15px;
     margin-bottom: 0;
   }
   @media screen and (min-width: @desktop-width) {

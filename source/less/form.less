@@ -176,12 +176,14 @@
     padding: 50px 60px;
   }
   @media screen and (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // gap: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
   }
 }
 .form__fieldset--contacts {
@@ -224,8 +226,38 @@
     margin-bottom: 0;
   }
   @media screen and (min-width: @desktop-width) {
-    // width: 30%;
+    width: 30%;
     margin-bottom: 0;
+  }
+}
+.form__input-container--flex-one {
+  @media screen and (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+.form__input-container--flex-two {
+  @media screen and (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+.form__input-container--flex-three {
+  @media screen and (min-width: @desktop-width) {
+    order: 3;
+  }
+}
+.form__input-container--flex-four {
+  @media screen and (min-width: @desktop-width) {
+    order: 4;
+  }
+}
+.form__input-container--flex-five {
+  @media screen and (min-width: @desktop-width) {
+    order: 5;
+  }
+}
+.form__input-container--flex-six {
+  @media screen and (min-width: @desktop-width) {
+    order: 6;
   }
 }
 .form__input {
@@ -249,6 +281,9 @@
 }
 .form__input--checkbox {
   margin-right: 22px;
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 .form__input--tel {
   @media screen and (min-width: @tablet-width) {

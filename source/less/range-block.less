@@ -7,16 +7,22 @@
   display: none;
   @media screen and (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
-    width: 260px;
+    justify-content: flex-start;
+    width: 275px;
+    margin-bottom: 25px;
     padding-bottom: 25px;
-    margin: 0 auto 25px auto;
     border-bottom: 1px solid rgba(40, 54, 69, 0.1);
     &:last-child {
       margin-bottom: 0;
     }
   }
   @media screen and (min-width: @desktop-width) {
+    width: 410px;
+    margin-bottom: 15px;
+    padding-bottom: 13px;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 .range-block__item--current {
@@ -30,12 +36,49 @@
   @media screen and (min-width: @tablet-width) {
     display: block;
   }
+}
+.range-block__img--size {
+  @media screen and (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+    margin-right: 29px;
+  }
   @media screen and (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+    margin-right: 48px;
+  }
+}
+.range-block__img--fill {
+  @media screen and (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+    margin-right: 28px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 44px;
+    height: 43px;
+    margin-right: 44px;
+  }
+}
+.range-block__img--contrast {
+  @media screen and (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+    margin-right: 32px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+    margin-right: 54px;
   }
 }
 .range-block__runner {
   @media screen and (min-width: @tablet-width) {
     width: 200px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 288px;
   }
 }
 .range-block__runner--size {
