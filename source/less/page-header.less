@@ -8,12 +8,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 66px;
+  min-height: 66px;
   padding-right: 20px;
   @media screen and (min-width: @tablet-width) {
-    height: 110px;
+    min-height: 110px;
   }
   @media screen and (min-width: @desktop-width) {
+    max-width: 1400px;
+    margin: 0 auto;
     padding-right: 130px;
   }
 }
@@ -24,6 +26,7 @@
   position: absolute;
   display: block;
   left: 20px;
+  cursor: pointer;
   @media screen and (max-width: @mobile-width-only) {
     width: 74px;
     height: 23px;

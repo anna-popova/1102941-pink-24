@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 46%;
+    width: 55%;
     padding-bottom: 120px;
   }
   @media screen and (min-width: @desktop-width) {
@@ -67,7 +67,11 @@
   }
 }
 .download__button {
-  width: 100%;
+  width: 280px;
+  font-size: 18px;
+  @media screen and (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
 .download__text-block--smaller {
   font-size: 14px;
