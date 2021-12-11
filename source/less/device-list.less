@@ -5,31 +5,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media screen and (min-width: @tablet-width) {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-top: 75px;
     padding-bottom: 60px;
   }
 }
+
 .device-list__item {
   width: 47px;
   height: 56px;
   margin-right: 35px;
+
   &:last-child {
     margin-right: 0;
   }
 }
+
 .device-list__item--apple {
   background: url("../img/apple-logo.svg") no-repeat center center;
   background-size: 47px 56px;
 }
+
 .device-list__item--android {
   background: url("../img/android-logo.svg") no-repeat center center;
   background-size: 43px 47px;
 }
+
 .device-list__item--micrisoft {
   background: url("../img/microsoft-logo.svg") no-repeat center center;
   background-size: 44px 41px;
