@@ -1,10 +1,16 @@
 .download {
   background-color: @dark-blue;
   @media screen and (min-width: @tablet-width) {
-  background-image: url("../img/download-screen-tablet.png"), url("../img/download-phone-tablet.png"), url("../img/download-back-tablet.jpg");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 195px 346px, 660px 545px, cover;
-  background-position: right 93px bottom 144px, right bottom, center center;
+    background-image: url("../img/download-screen-tablet.png"), url("../img/download-phone-tablet.png"), url("../img/download-back-tablet.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 195px 346px, 660px 545px, cover;
+    background-position: right 93px bottom 144px, right bottom, center center;
+  }
+  @media screen and (min-width: @desktop-width) {
+    background-image: url("../img/download-screen-desktop.png"), url("../img/download-phone-desktop.png"), url("../img/download-back-desktop.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 230px 408px, 1050px 645px, cover;
+    background-position: right 250px bottom 173px, right bottom, center center;
   }
 }
 .download__wrapper {
@@ -13,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 46%;
+    width: 55%;
     padding-bottom: 120px;
   }
   @media screen and (min-width: @desktop-width) {
@@ -61,7 +67,11 @@
   }
 }
 .download__button {
-  width: 100%;
+  width: 280px;
+  font-size: 18px;
+  @media screen and (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
 .download__text-block--smaller {
   font-size: 14px;

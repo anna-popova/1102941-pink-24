@@ -1,22 +1,95 @@
 .form {
+  position: relative;
 }
 .form__wrapper {
   padding-top: 54px;
   padding-bottom: 26px;
+  @media screen and (min-width: @tablet-width) {
+    padding: 100px 22px 50px 22px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    padding: 100px 130px 75px 130px;
+  }
+}
+.form__form-application {
+  @media screen and (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .form__text {
+  margin-bottom: 55px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 55px;
   text-align: center;
   font-size: 14px;
   line-height: 2.1;
   color: @blue;
+  @media screen and (min-width: @tablet-width) {
+    order: 1;
+    margin-bottom: 82px;
+    padding-right: 63px;
+    padding-left: 63px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 95px;
+    padding-right: 222px;
+    padding-left: 222px;
+  }
+}
+.form__text--mobile-hidden {
+  @media screen and (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+.form__text--upper {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: @blue;
+  margin-bottom: 0;
+  @media screen and (min-width: @tablet-width) {
+    order: 8;
+    padding: 0;
+  }
+}
+.form__text--pink {
+  padding: 0;
+  color: @pink;
 }
 .form__name-block {
+  padding-bottom: 44px;
+  @media screen and (max-width: @mobile-width-only) {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+  @media screen and (min-width: @tablet-width) {
+    order: 2;
+    padding-bottom: 65px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: calc(50% - 74px);
+    padding-bottom: 0;
+    margin-right: 74px;
+    margin-bottom: 65px;
+  }
+}
+.form__name-inner-block {
   display: flex;
   flex-direction: column;
-  padding: 0 22px 44px 22px;
+  @media screen and (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 55px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 .form__lable {
   margin: 17px;
@@ -24,48 +97,204 @@
   line-height: 1.3;
   color: @pink;
   text-transform: uppercase;
+  @media screen and (min-width: @tablet-width) {
+    margin: 0;
+    text-align: center;
+  }
 }
 .form__lable--indent {
   margin-left: 22px;
+  margin-bottom: 17px;
+  @media screen and (min-width: @tablet-width) {
+    margin-right: 20px;
+    margin-left: 0;
+  }
 }
 .form__lable--mobile-hidden {
   display: none;
+  @media screen and (min-width: @tablet-width) {
+    display: block;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
 }
 .form__lable--mobile {
   width: 218px;
   margin: 0 auto 44px auto;
   text-align: center;
+  @media screen and (min-width: @tablet-width) {
+    display: none;
+  }
+}
+.form__lable--tel {
+  @media screen and (min-width: @tablet-width) {
+    order: 2;
+    margin-top: 22px;
+    margin-left: 22px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+.form__lable--email {
+  @media screen and (min-width: @tablet-width) {
+    order: 2;
+    margin-top: 22px;
+    margin-left: 22px;
+    text-align: left;
+  }
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 .form__fieldset {
   display: flex;
   flex-direction: column;
   padding: 42px 22px;
-  border: none;
+  border: 2px solid #e5e5e5;
+  @media screen and (max-width: @mobile-width-only) {
+    border: none;
+  }
+  @media screen and (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 .form__fieldset--gray {
   background-color: rgb(242, 242, 242);
+  @media screen and (min-width: @tablet-width) {
+    background-color: @white;
+  }
+}
+.form__fieldset--achieve {
+  @media screen and (min-width: @tablet-width) {
+    order: 5;
+    padding: 50px 60px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // gap: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+  }
+}
+.form__fieldset--contacts {
+  @media screen and (min-width: @tablet-width) {
+    order: 4;
+    display: flex;
+  }
+  @media screen and (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+.form__fieldset--app {
+  @media screen and (min-width: @tablet-width) {
+    order: 3;
+    padding: 50px 60px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+.form__fieldset--emotion {
+  @media screen and (min-width: @tablet-width) {
+    order: 6;
+    padding: 50px 50px;
+  }
+}
+.form__contacts-block {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: @desktop-width) {
+    width: 45.5%;
+  }
 }
 .form__input-container {
   margin-bottom: 45px;
   &:last-child {
     margin-bottom: 0;
   }
+  @media screen and (min-width: @desktop-width) {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+.form__input-container--flex-one {
+  @media screen and (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+.form__input-container--flex-two {
+  @media screen and (min-width: @desktop-width) {
+    order: 2;
+  }
+}
+.form__input-container--flex-three {
+  @media screen and (min-width: @desktop-width) {
+    order: 3;
+  }
+}
+.form__input-container--flex-four {
+  @media screen and (min-width: @desktop-width) {
+    order: 4;
+  }
+}
+.form__input-container--flex-five {
+  @media screen and (min-width: @desktop-width) {
+    order: 5;
+  }
+}
+.form__input-container--flex-six {
+  @media screen and (min-width: @desktop-width) {
+    order: 6;
+  }
 }
 .form__input {
   margin-bottom: 29px;
-  padding: 23px 20px;
+  padding: 15px 20px;
   border: 2px solid rgb(229, 229, 229);
   &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: @tablet-width) {
+    margin-bottom: 38px;
   }
 }
 .form__input--text {
   font-family: inherit;
   font-size: 18px;
   color: @blue; //почему не применился цвет в имя фамилия отчество телефон почта?
+  @media screen and (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }
 .form__input--checkbox {
   margin-right: 22px;
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+.form__input--tel {
+  @media screen and (min-width: @tablet-width) {
+    order: 1;
+    margin-bottom: 0;
+  }
+}
+.form__input--email {
+  @media screen and (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 .form__input--radio {
   margin-right: 30px;
@@ -73,20 +302,29 @@
 .form__textarea {
   min-height: 200px;
   resize: none;
-  padding: 22px 20px;
+  padding: 15px 20px;
   line-height: 1.6;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
+  @media screen and (min-width: @tablet-width) {
+    padding: 20px;
+  }
+}
+.form__bottom-block {
+  @media screen and (min-width: @tablet-width) {
+    order: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 .form__button {
   margin-bottom: 45px;
-}
-.form__text--upper {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: @blue;
-  margin-bottom: 0;
-}
-.form__text--pink {
-  padding: 0;
-  color: @pink;
+  @media screen and (min-width: @tablet-width) {
+    order: 7;
+    max-width: 296px;
+    margin: 0;
+  }
 }

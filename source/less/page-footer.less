@@ -4,13 +4,48 @@
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
+  @media screen and (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  @media screen and (min-width: @desktop-width) {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 125px;
+    padding-left: 125px;
+  }
 }
 .page-footer__logo {
-  display: inline-block;
-  margin-bottom: 40px;
+  display: block;
+  width: 147px;
+  height: 40px;
+  margin: 0 auto 40px auto;
+  cursor: pointer;
+  @media screen and (max-width: @mobile-width-only) {
+    width: 145px;
+    height: 40px;
+    background: url("../img/logo-mobile-footer.svg") no-repeat center center;
+  }
+  @media screen and (min-width: @tablet-width) {
+    margin: 0;
+    width: 145px;
+    height: 40px;
+    margin-bottom: 0;
+    background: url("../img/logo-mobile-footer.svg") no-repeat center center;
+  }
+  @media screen and (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
+    background: url("../img/logo-dektop-footer.svg") no-repeat center center;
+  }
 }
 .page-footer__social {
   margin-bottom: 40px;
+  @media screen and (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 .page-footer__copyright {
 }

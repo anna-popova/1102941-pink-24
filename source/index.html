@@ -12,19 +12,14 @@
 <body class="page__body">
 
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <picture>
-          <source srcset="img/logo-mobile-header.svg" media="(max-width: @mobile-width-only)">
-          <source srcset="img/logo-tablet-header.svg" media="(min-width: @tablet-width)">
-          <source srcset="img/logo-dektop-header.svg" media="(min-width: @desktop-width)">
-          <img class="page-header__img" src="img/logo-dektop-header.svg" alt="Логотип приложения PINK">
-        </picture>
+    <div id="page-header" class="page-header__wrapper">
+      <a class="page-header__logo"><span class="visually-hidden">Логотип приложения PINK</span>
       </a>
       <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button id="nav-btn" class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
+            меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul id="main-nav" class="main-nav__list site-list">
             <li class="site-list__item site-list__item--current"><a href="#">Главная</a></li>
             <li class="site-list__item"><a href="catalog.html">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
@@ -94,7 +89,7 @@
       <div class="article__wrapper">
         <h2 class="visually-hidden">Статья об исследовании британских ученых</h2>
         <div class="article__text-block">
-          <p class="article__title">Эффект на 24 часа!</p>
+          <p class="article__title">Эффект<br> на 24 часа!</p>
           <p class="article__text">Британские ученые провели исследования и доказали, что положительный эффект от
             использования приложения длится целые сутки!</p>
           <p class="article__text"><a class="article__link" href="#">Узнать больше об исследовании</a></p>
@@ -115,23 +110,28 @@
               фотографии!»
             </p>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item slider__item--blocked">
             <cite class="reviews__autor-name">Сергей Попов</cite>
             <p class="reviews__autor-information visually-hidden">26 лет, повар</p>
             <p class="reviews__text">«Отличное приожение!»</p>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item slider__item--blocked">
             <cite class="reviews__autor-name">Роман Иванов</cite>
             <p class="reviews__autor-information visually-hidden">27 лет, музыкант</p>
             <p class="reviews__text">«Ничего лучше для меня нет!»</p>
           </blockquote>
-          <button class="reviews__btn reviews__btn--prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__btn reviews__btn--next" type="button">Следующий отзыв</button>
+          <button class="reviews__btn reviews__btn--prev" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="reviews__btn reviews__btn--next" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
         </div>
         <p class="reviews__toggles slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle slider__toggle--current" type="button"><span
+              class="visually-hidden">1</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
         </p>
       </div>
     </section>
@@ -149,7 +149,7 @@
               <p class="tariffs__name">База</p>
               <p class="tariffs__price">1,99 USD</p>
             </th>
-            <th class="tariffs__header tariffs__header--displayed">
+            <th class="tariffs__header tariffs__header--hit">
               <p class="tariffs__hit">Хит</p>
               <p class="tariffs__name">Стандарт</p>
               <p class="tariffs__price">3,99 USD</p>
@@ -163,15 +163,15 @@
           <tr class="tariffs__row">
             <!--вторая строка-->
             <td class="tariffs__data tariffs__data--text">Розовый фильтр</td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Розовый фильтр</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
-            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Розовый фильтр</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Розовый фильтр</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
@@ -180,15 +180,15 @@
           <tr class="tariffs__row">
             <!--третья строка-->
             <td class="tariffs__data tariffs__data--text">Смайлики</td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Смайлики</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
-            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Смайлики</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Смайлики</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
@@ -197,15 +197,15 @@
           <tr class="tariffs__row">
             <!--четвертая строка-->
             <td class="tariffs__data tariffs__data--text">Комментарии</td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Комментарии</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
-            <td class="tariffs__data tariffs__data--yes tariffs__data--displayed">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Комментарии</span>
               <img src="img/no.svg" width="27" height="27" alt="Нет">
             </td>
-            <td class="tariffs__data tariffs__data--yes">
+            <td class="tariffs__data tariffs__data--icon">
               <span class="tariffs__include">Комментарии</span>
               <img src="img/yes.svg" width="31" height="21" alt="Есть">
             </td>
@@ -213,9 +213,10 @@
         </table>
 
         <p class="tariffs__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle slider__toggle--current" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+          <button class="slider__toggle slider__toggle--current" type="button"><span
+              class="visually-hidden">2</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
         </p>
 
       </div>
@@ -223,20 +224,20 @@
 
     <section class="contacts">
       <div class="contacts__wrapper">
-        <p class="contacts__text-block">Остались вопросы? Свяжитесь с нами!</p>
+        <p class="contacts__text-block">Остались вопросы?<br> Свяжитесь с нами!</p>
 
         <ul class="contacts__list">
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--tel">
             <h3 class="contacts__title">Звоните:</h3>
             <p class="contacts__text"><a href="tel:++78125556666">+7 (812) 555-66-66</a></p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--email">
             <h3 class="contacts__title">Пишите:</h3>
             <p class="contacts__text"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--adress">
             <h3 class="contacts__title">Приезжайте в гости:</h3>
-            <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+            <p class="contacts__text">ул. Большая<br> Конюшенная, 19/8</p>
           </li>
         </ul>
 
@@ -253,7 +254,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo">
-        <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
+        <span class="visually-hidden">Логотип приложения PINK</span>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -279,6 +280,28 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+      var isOpen = false;
+      var button = document.getElementById("nav-btn");
+      var headerBlock = document.getElementById("page-header");
+      var navBlock = document.getElementById("main-nav");
+      button.addEventListener("click", function (e) {
+        isOpen = !isOpen;
+        if (isOpen) {
+          headerBlock.classList.add("page-header__wrapper--bg");
+          navBlock.classList.add("main-nav__list--open");
+          button.classList.add("main-nav__toggle--close");
+        } else {
+          headerBlock.classList.remove("page-header__wrapper--bg");
+          navBlock.classList.remove("main-nav__list--open");
+          button.classList.remove("main-nav__toggle--close");
+        }
+      }, false);
+    });
+  </script>
 
 </body>
 

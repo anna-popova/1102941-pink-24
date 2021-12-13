@@ -10,15 +10,16 @@
 </head>
 
 <body class="page__body">
+
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile-header.svg" width="74" height="23" alt="Логотип приложения PINK">
+    <div id="page-header" class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html"><span class="visually-hidden">Логотип приложения PINK</span>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="page-header__nav main-nav">
+        <button id="nav-btn" class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
+            меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul id="main-nav" class="main-nav__list site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
             <li class="site-list__item site-list__item--current"><a href="#">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
@@ -40,30 +41,31 @@
     <section class="gallery">
       <div class="gallery__wrapper">
         <h2 class="visually-hidden">Галерея фотографий пользователей</h2>
-        <p class="gallery__text gallery__text--top">Взгляните на фотографии, которые выкладывают пользователи!<br>
-          Видите, как
-          не хватает ваших?</p>
+        <p class="gallery__text gallery__text--top">Взгляните на фотографии, которые выкладывают пользователи!
+          Видите, как не хватает ваших?</p>
 
         <div class="gallery__list">
 
-          <div class="gallert__item gallert__item--top">
+          <div class="gallery__item gallery__item--top">
             <div class="gallery__img-block gallery__img-block--top">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/panorama-mobile.jpg" media="(max-width: 640px)">
-                <img class="gallery__img" src="img/panorama-desktop.jpg"
+                <source srcset="img/panorama-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/panorama-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/panorama-desktop.jpg" media="(min-width: 1200px)">
+                <img class="gallery__img gallery__img--top" src="img/panorama-desktop.jpg"
                   alt="Панорамное фото площадки для пржков с тарзанки">
               </picture>
               <p class="gallery__attn">Панорама дня</p>
             </div>
-            <div class="gallery__text-block">
-              <p class="gallery__autor-time">
+            <div class="gallery__text-block gallery__text-block--top">
+              <p class="gallery__autor-time gallery__autor-time--top">
                 <span class="gallery__autor">Анна</span>
                 <span class="gallery__time">(5 минут назад)</span>
               </p>
-              <p class="gallery__caption">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую
+              <p class="gallery__caption gallery__caption--top">Прыгать или нет? Напишите в комментарии свой совет и
+                смотрите прямую
                 трансляцию в перископе, задавайте свои вопросы!</p>
-              <div class="gallery__likes likes">
+              <div class="gallery__likes gallery__likes--top likes">
                 <button class="likes__heart" type="button">
                   <!--TODO: заменить на спрайт-->
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
@@ -78,11 +80,12 @@
 
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/photo-camera-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/photo-camera-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/photo-camera-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/photo-camera-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/photo-camera-desktop.jpg"
                   alt="Фото фото-камеры, фотографируйщей белый автомобиль">
               </picture>
@@ -107,11 +110,12 @@
             </div>
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/drums-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/drums-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/drums-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/drums-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/drums-desktop.jpg" alt="Фото барабанной установки">
               </picture>
             </div>
@@ -135,11 +139,12 @@
             </div>
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/glass-roof-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/glass-roof-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/glass-roof-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/glass-roof-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/glass-roof-desktop.jpg" alt="Фото стеклянной крыши">
               </picture>
             </div>
@@ -163,11 +168,12 @@
             </div>
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/orange-tent-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/orange-tent-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/orange-tent-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/orange-tent-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/orange-tent-desktop.jpg"
                   alt="Фото оранжевого тента с надписью Кубанская бахча">
               </picture>
@@ -192,11 +198,12 @@
             </div>
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/legs-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/legs-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/legs-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/legs-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/legs-desktop.jpg" alt="Ноги мужчины, сидящего на краю обрыва">
               </picture>
             </div>
@@ -220,11 +227,12 @@
             </div>
           </div>
 
-          <div class="gallert__item">
+          <div class="gallery__item">
             <div class="gallery__img-block">
               <picture>
-                <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-                <source srcset="img/plane-mobile.jpg" media="(max-width: 640px)">
+                <source srcset="img/plane-mobile.jpg" media="(max-width: 659px)">
+                <source srcset="img/plane-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
+                <source srcset="img/plane-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img" src="img/plane-desktop.jpg"
                   alt="Фото крыла самолета из иллюминатора на рассвете">
               </picture>
@@ -260,9 +268,10 @@
 
         <div class="new-post__img-block">
           <picture>
-            <!--TODO: скорректировать медиа-запрос и добавить остальные-->
-            <source srcset="img/road-mobile.jpg" media="(max-width: 640px)">
-            <img class="gallery__img" src="img/road-desktop.jpg" alt="Дорога через лес в зимнее время">
+            <source srcset="img/road-mobile.jpg" media="(max-width: 659px)">
+            <source srcset="img/road-tablet.jpg" media="(min-width: 660px)">
+            <source srcset="img/road-desktop.jpg" media="(min-width: 1200px)">
+            <img class="new-post__img" src="img/road-desktop.jpg" alt="Дорога через лес в зимнее время">
           </picture>
         </div>
 
@@ -285,19 +294,22 @@
           <div class="range-block__list">
 
             <div class="range-block__item range-block__item--current">
-              <img src="img/size-icon.svg" width="16" height="16" alt="Корректировать размер фотографии">
+              <img class="range-block__img range-block__img--size" src="img/size-icon.svg"
+                alt="Корректировать размер фотографии">
               <input class="range-block__runner range-block__runner--size" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
 
             <div class="range-block__item">
-              <img src="img/fill-icon.svg" width="24" height="22" alt="Корректировать заливку фотографии">
+              <img class="range-block__img range-block__img--fill" src="img/fill-icon.svg"
+                alt="Корректировать заливку фотографии">
               <input class="range-block__runner range-block__runner--fill" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
 
             <div class="range-block__item">
-              <img src="img/contrast-icon.svg" width="16" height="16" alt="Корректировать контраст фотографии">
+              <img class="range-block__img range-block__img--contrast" src="img/contrast-icon.svg"
+                alt="Корректировать контраст фотографии">
               <input class="range-block__runner range-block__runner--contrast" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
@@ -315,8 +327,8 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo">
-        <img src="img/logo-mobile-footer.svg" width="145" height="40" alt="Логотип приложения PINK">
+      <a class="page-footer__logo" href="index.html">
+        <span class="visually-hidden">Логотип приложения PINK</span>
       </a>
       <div class="page-footer__social social">
         <ul class="social__list">
@@ -342,6 +354,28 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+      var isOpen = false;
+      var button = document.getElementById("nav-btn");
+      var headerBlock = document.getElementById("page-header");
+      var navBlock = document.getElementById("main-nav");
+      button.addEventListener("click", function (e) {
+        isOpen = !isOpen;
+        if (isOpen) {
+          headerBlock.classList.add("page-header__wrapper--bg");
+          navBlock.classList.add("main-nav__list--open");
+          button.classList.add("main-nav__toggle--close");
+        } else {
+          headerBlock.classList.remove("page-header__wrapper--bg");
+          navBlock.classList.remove("main-nav__list--open");
+          button.classList.remove("main-nav__toggle--close");
+        }
+      }, false);
+    });
+  </script>
 
 </body>
 

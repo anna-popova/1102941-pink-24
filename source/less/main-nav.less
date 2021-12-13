@@ -2,33 +2,93 @@
 
 }
 .main-nav__toggle {
+  position: relative;
   display: block;
   width: 50px;
   height: 24px;
-  background: transparent url("../img/menu-burger.svg") no-repeat center center;
-  background-size: 100%;
+  background-color: transparent;
   border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+  }
+  &:hover::before {
+    background-color: @pink;
+    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
+  }
+  &:active::before {
+    background-color: @pink-down;
+    box-shadow: 0 10px 0 0 @pink-down, 0 20px 0 0 @pink-down;
+  }
   @media screen and (min-width: @desktop-width) {
     display: none;
   }
 }
+.main-nav__toggle--close {
+  width: 23px;
+  height: 23px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -2px;
+    width: 27px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 0;
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+  &:hover::after {
+    background-color: @pink;
+    box-shadow: none;
+  }
+  &:hover::before {
+    background-color: @pink;
+    box-shadow: none;
+  }
+  &:active::after {
+    background-color: @pink-down;
+    box-shadow: none;
+  }
+  &:active::before {
+    background-color: @pink-down;
+    box-shadow: none;
+  }
+}
 .main-nav__wrapper {
-
 }
 .main-nav__list {
   position: absolute;
-  top: 69px;
+  top: 66px;
   right: 0;
   left: 0;
-
-  display: none; //показать/убрать выпадающее меню
-
+  display: none;
   text-align: center;
   @media screen and (min-width: @tablet-width) {
-    top: 109px;
+    top: 110px;
   }
   @media screen and (min-width: @desktop-width) {
     position: static;
     display: block;
   }
+}
+.main-nav__list--open {
+  display: block;
 }
