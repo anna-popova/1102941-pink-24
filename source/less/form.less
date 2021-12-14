@@ -22,7 +22,7 @@
   }
 }
 .form__text {
-  margin-bottom: 55px;
+  margin-bottom: 38px;
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
@@ -104,7 +104,6 @@
 }
 .form__lable--indent {
   margin-left: 22px;
-  margin-bottom: 17px;
   @media screen and (min-width: @tablet-width) {
     margin-right: 20px;
     margin-left: 0;
@@ -120,7 +119,7 @@
 }
 .form__lable--mobile {
   width: 218px;
-  margin: 0 auto 44px auto;
+  margin: 0 auto 35px auto;
   text-align: center;
   @media screen and (min-width: @tablet-width) {
     display: none;
@@ -152,7 +151,7 @@
 .form__fieldset {
   display: flex;
   flex-direction: column;
-  padding: 42px 22px;
+  padding: 40px 22px;
   border: 2px solid #e5e5e5;
   @media screen and (max-width: @mobile-width-only) {
     border: none;
@@ -176,9 +175,6 @@
     padding: 50px 60px;
   }
   @media screen and (min-width: @desktop-width) {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // gap: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -187,6 +183,7 @@
   }
 }
 .form__fieldset--contacts {
+  padding-top: 23px;
   @media screen and (min-width: @tablet-width) {
     order: 4;
     display: flex;
@@ -274,9 +271,11 @@
 .form__input--text {
   font-family: inherit;
   font-size: 18px;
-  color: @blue; //почему не применился цвет в имя фамилия отчество телефон почта?
   @media screen and (min-width: @tablet-width) {
     flex-grow: 1;
+  }
+  &::placeholder {
+    color: @blue;
   }
 }
 .form__input--checkbox {
@@ -310,11 +309,14 @@
   }
 }
 .form__bottom-block {
+  padding-right: 22px;
+  padding-left: 22px;
   @media screen and (min-width: @tablet-width) {
     order: 9;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
   }
   @media screen and (min-width: @desktop-width) {
     width: 100%;
@@ -327,4 +329,8 @@
     max-width: 296px;
     margin: 0;
   }
+}
+.form__button--disabled {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
 }
