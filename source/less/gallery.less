@@ -39,9 +39,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;
   }
   @media screen and (min-width: @desktop-width) {
+    margin-bottom: 10px;
   }
 }
 .gallery__item {
@@ -82,30 +82,21 @@
 }
 .gallery__img-block {
   max-width: 280px;
-  //height: 180px; //чтобы не было отступа между фото и текстовым блоком
   margin: 0 auto;
   @media screen and (min-width: @tablet-width) {
     max-width: 300px;
-    // height: 300px; //чтобы не было отступа между фото и текстовым блоком
   }
   @media screen and (min-width: @desktop-width) {
   }
 }
 .gallery__img-block--top {
   position: relative;
-  max-width: none; //чтобы резинилось
-  //max-width: 320px; //чтобы не резинилось
-  //height: 137px; //чтобы не было отступа между фото и текстовым блоком
+  max-width: none;
   height: auto;
   margin: 0 auto;
-  @media screen and (min-width: @tablet-width) {
-    //max-width: 660px; //чтобы не резинилось
-    //height: 509px; //чтобы не было отступа между фото и текстовым блоком
-  }
-  @media screen and (min-width: @desktop-width) {
-  }
 }
 .gallery__img {
+  display: block;
   width: 280px;
   @media screen and (min-width: @tablet-width) {
     width: 300px;
@@ -158,19 +149,22 @@
     padding: 30px;
   }
   @media screen and (min-width: @desktop-width) {
+    min-height: 185px;
   }
 }
 .gallery__text-block--top {
+  width: 87.5%;
+  max-width: none;
   @media screen and (min-width: @tablet-width) {
+    width: 94%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 620px;
   }
   @media screen and (min-width: @desktop-width) {
-    max-width: 940px;
+    width: 78.5%;
   }
 }
 .gallery__autor-time {
@@ -207,6 +201,7 @@
 }
 .gallery__caption {
   font-size: 14px;
+  line-height: 1.7;
   font-weight: 400;
   color: @blue;
   margin-bottom: 25px;
@@ -221,8 +216,14 @@
     order: 3;
     width: 100%;
     margin-bottom: 0;
+    & br {
+      display: none;
+    }
   }
   @media screen and (min-width: @desktop-width) {
+    & br {
+      display: none;
+    }
   }
 }
 .gallery__likes--top {

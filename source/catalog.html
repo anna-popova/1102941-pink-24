@@ -53,7 +53,7 @@
                 <source srcset="img/panorama-tablet.jpg" media="(min-width: 660px) and (max-width: 1199px)">
                 <source srcset="img/panorama-desktop.jpg" media="(min-width: 1200px)">
                 <img class="gallery__img gallery__img--top" src="img/panorama-desktop.jpg"
-                  alt="Панорамное фото площадки для пржков с тарзанки">
+                  alt="Панорамное фото площадки для прыжков с тарзанки">
               </picture>
               <p class="gallery__attn">Панорама дня</p>
             </div>
@@ -62,9 +62,8 @@
                 <span class="gallery__autor">Анна</span>
                 <span class="gallery__time">(5 минут назад)</span>
               </p>
-              <p class="gallery__caption gallery__caption--top">Прыгать или нет? Напишите в комментарии свой совет и
-                смотрите прямую
-                трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="gallery__caption gallery__caption--top">Прыгать или нет? Напишите в комментарии свой совет и<br>
+                смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="gallery__likes gallery__likes--top likes">
                 <button class="likes__heart" type="button">
                   <!--TODO: заменить на спрайт-->
@@ -294,22 +293,28 @@
           <div class="range-block__list">
 
             <div class="range-block__item range-block__item--current">
-              <img class="range-block__img range-block__img--size" src="img/size-icon.svg"
-                alt="Корректировать размер фотографии">
+              <div class="range-block__img-block">
+                <img class="range-block__img range-block__img--size" src="img/size-icon.svg"
+                  alt="Корректировать размер фотографии">
+              </div>
               <input class="range-block__runner range-block__runner--size" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
 
             <div class="range-block__item">
-              <img class="range-block__img range-block__img--fill" src="img/fill-icon.svg"
-                alt="Корректировать заливку фотографии">
+              <div class="range-block__img-block">
+                <img class="range-block__img range-block__img--fill" src="img/fill-icon.svg"
+                  alt="Корректировать заливку фотографии">
+              </div>
               <input class="range-block__runner range-block__runner--fill" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
 
             <div class="range-block__item">
-              <img class="range-block__img range-block__img--contrast" src="img/contrast-icon.svg"
-                alt="Корректировать контраст фотографии">
+              <div class="range-block__img-block">
+                <img class="range-block__img range-block__img--contrast" src="img/contrast-icon.svg"
+                  alt="Корректировать контраст фотографии">
+              </div>
               <input class="range-block__runner range-block__runner--contrast" type="range" min="0" max="100" step="1"
                 value="50">
             </div>
