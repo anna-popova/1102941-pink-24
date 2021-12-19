@@ -67,10 +67,15 @@
     width: 157px;
     height: 270px;
     margin: 40px auto 0 auto;
-    background-image: url("../img/benefits-screen-mobile.png"), url("../img/benefits-iphone-mobile.png");
+    background-image: url("../img/benefits-screen-mobile.png"),
+    url("../img/benefits-iphone-mobile.png");
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom -12px, center bottom -50px;
     background-size: 136px 245px, 157px 320px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/benefits-screen-mobile@2x.png"),
+      url("../img/benefits-iphone-mobile@2x.png");
+    }
     @media screen and (min-width: @tablet-width) {
       position: absolute;
       left: 0;
@@ -78,10 +83,15 @@
       width: 290px;
       height: 547px;
       margin: 0;
-      background-image: url("../img/benefits-screen-tablet.png"), url("../img/benefits-iphone-tablet.png");
+      background-image: url("../img/benefits-screen-tablet.png"),
+      url("../img/benefits-iphone-tablet.png");
       background-repeat: no-repeat, no-repeat;
       background-position: left 35px bottom, left 20px bottom -61px;
       background-size: 237px 421px, 268px 547px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/benefits-screen-tablet@2x.png"),
+        url("../img/benefits-iphone-tablet@2x.png");
+      }
     }
     @media screen and (min-width: @desktop-width) {
       display: none;
@@ -127,6 +137,11 @@
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/benefits-screen-desktop-gray@2x.png"),
+        url("../img/benefits-iphone-desktop@2x.png"),
+        url("../img/benefits-shadow-desktop@2x.png");
+      }
     }
   }
 }
@@ -145,6 +160,11 @@
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/benefits-screen-desktop-pink@2x.png"),
+        url("../img/benefits-iphone-desktop@2x.png"),
+        url("../img/benefits-shadow-desktop@2x.png");
+      }
     }
   }
 }
@@ -163,6 +183,11 @@
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/benefits-screen-desktop-smile@2x.png"),
+        url("../img/benefits-iphone-desktop@2x.png"),
+        url("../img/benefits-shadow-desktop@2x.png");
+      }
     }
   }
 }

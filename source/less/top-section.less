@@ -3,15 +3,24 @@
   text-align: center;
   background: @dark-blue url("../img/download-back-mobile.jpg") no-repeat center top;
   background-size: cover;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/download-back-mobile@2x.jpg");
+  }
   @media screen and (min-width: @tablet-width) {
     padding: 191px 20px 74px 20px;
     background: @dark-blue url("../img/download-back-tablet.jpg") no-repeat center top;
     background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/download-back-tablet@2x.jpg");
+    }
   }
   @media screen and (min-width: @desktop-width) {
     padding: 184px 164px 104px 164px;
     background: @dark-blue url("../img/download-back-desktop.jpg") no-repeat center top;
     background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/download-back-desktop@2x.jpg");
+    }
   }
 }
 .top-section--catalog {
