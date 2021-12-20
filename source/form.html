@@ -227,11 +227,19 @@
       var name = document.getElementById("name");
       var email = document.getElementById("email");
 
+      formButton.addEventListener("click", function (e) {
+        alert("Работает");
+      }
+      )
+
       function updateButtonAccess() {
+        console.log(lastName.value, name.value, email.value);
         if (!!lastName.value && !!name.value && !!email.value) {
           formButton.disabled = false;
+          formButton.classList.remove("form__button--disabled");
         } else {
           formButton.disabled = true;
+          formButton.classList.add("form__button--disabled");
         }
       }
       updateButtonAccess();
