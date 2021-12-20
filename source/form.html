@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конкурс на самое безбашенное путешествие с Пинк</title>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -129,7 +133,7 @@
           </fieldset>
 
           <div class="form__bottom-block">
-            <button class="form__button button button--green" type="button">Отправить форму</button>
+            <button class="form__button button button--green" type="button" id="form-button">Отправить форму</button>
             <p class="form__text form__text--upper">
               <span class="form__text form__text--pink">*</span> — обязательные поля
             </p>
@@ -204,6 +208,7 @@
       var button = document.getElementById("nav-btn");
       var headerBlock = document.getElementById("page-header");
       var navBlock = document.getElementById("main-nav");
+
       button.addEventListener("click", function (e) {
         isOpen = !isOpen;
         if (isOpen) {
@@ -216,6 +221,39 @@
           button.classList.remove("main-nav__toggle--close");
         }
       }, false);
+
+      var formButton = document.getElementById("form-button");
+      var lastName = document.getElementById("last-name");
+      var name = document.getElementById("name");
+      var email = document.getElementById("email");
+
+      formButton.addEventListener("click", function (e) {
+        alert("Работает");
+      }
+      )
+
+      function updateButtonAccess() {
+        console.log(lastName.value, name.value, email.value);
+        if (!!lastName.value && !!name.value && !!email.value) {
+          formButton.disabled = false;
+          formButton.classList.remove("form__button--disabled");
+        } else {
+          formButton.disabled = true;
+          formButton.classList.add("form__button--disabled");
+        }
+      }
+      updateButtonAccess();
+
+      lastName.oninput = function () {
+        updateButtonAccess();
+      }
+      name.oninput = function () {
+        updateButtonAccess();
+      }
+      email.oninput = function () {
+        updateButtonAccess();
+      }
+
     });
   </script>
 
