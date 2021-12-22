@@ -2,6 +2,7 @@
   background-color: @blue;
   @media screen and (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     background-color: transparent;
   }
 }
@@ -18,6 +19,9 @@
     margin-right: 78px;
     &:last-child {
       margin-right: 0;
+    }
+    &:nth-child(n+5) {
+      margin-top: 30px;
     }
   }
   & a {

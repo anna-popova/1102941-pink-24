@@ -30,55 +30,78 @@
   }
 }
 .range-block__img-wrap {
+  display: none;
   @media screen and (min-width: @tablet-width) {
+    display: block;
     width: 24px;
   }
   @media screen and (min-width: @desktop-width) {
     width: 48px;
   }
 }
-.range-block__img {
-  display: none;
-  @media screen and (min-width: @tablet-width) {
-    display: block;
-    margin: 0 auto;
+.range-block__icon--visible-tablet {
+  @media screen and (min-width: @desktop-width) {
+    display: none;
   }
 }
-.range-block__img--size {
+.range-block__icon--visible-desktop {
   @media screen and (min-width: @tablet-width) {
-    width: 22px;
-    height: 22px;
+    display: none;
   }
   @media screen and (min-width: @desktop-width) {
-    width: 44px;
-    height: 44px;
+    display: inline-block;
   }
 }
-.range-block__img--fill {
-  @media screen and (min-width: @tablet-width) {
-    width: 24px;
-    height: 22px;
-  }
-  @media screen and (min-width: @desktop-width) {
-    width: 44px;
-    height: 43px;
-  }
-}
-.range-block__img--contrast {
-  @media screen and (min-width: @tablet-width) {
-    width: 16px;
-    height: 16px;
-  }
-  @media screen and (min-width: @desktop-width) {
-    width: 32px;
-    height: 32px;
-  }
-}
+
 .range-block__runner {
   width: 240px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-runnable-track {
+    height: 2px;
+    background-color: @blue;
+  }
+
+  &::-moz-range-track {
+    height: 2px;
+    background-color: @blue;
+  }
+
+  &::-webkit-slider-thumb {
+    background: @white;
+    border: 2px solid @pink;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    -webkit-appearance: none;
+    margin-top: -6px;
+      &:active {
+        background: @pink;
+      }
+  }
+
+  &::-moz-range-thumb {
+    background: @white;
+    border: 2px solid @pink;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    -webkit-appearance: none;
+    margin-top: -6px;
+      &:active {
+      background: @pink;
+      }
+  }
+
   @media screen and (min-width: @tablet-width) {
     width: 81%;
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 70%;
   }

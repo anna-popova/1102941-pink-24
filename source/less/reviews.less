@@ -1,20 +1,25 @@
 .reviews {
 }
 .reviews__wrapper {
+  position: relative;
   padding: 50px 20px 60px 20px;
   text-align: center;
+  @media screen and (min-width: @tablet-width) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   @media screen and (min-width: @desktop-width) {
+    max-width: none;
     position: relative;
     padding: 190px 255px 120px 255px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 72px;
-      width: 79px;
-      height: 63px;
-      background: url("../img/reviews-quotes.svg") no-repeat center center;
-      background-size: 79px 63px;
-    }
+  }
+}
+.reviews__quotes {
+  display: none;
+  @media screen and (min-width: @desktop-width) {
+    position: absolute;
+    top: 72px;
+    display: inline-block;
   }
 }
 .reviews__list {
@@ -70,28 +75,33 @@
 }
 .reviews__btn {
   display: none;
-  cursor: pointer;
+
   @media screen and (min-width: @desktop-width) {
     position: absolute;
     top: 210px;
     display: block;
-    width: 22px;
-    height: 41px;
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
 .reviews__btn--prev {
   @media screen and (min-width: @desktop-width) {
     left: 130px;
-    background: url("../img/reviews-prev.svg") no-repeat center center;
-    background-size: 22px 41px;
   }
 }
 .reviews__btn--next {
   @media screen and (min-width: @desktop-width) {
     right: 130px;
-    background: url("../img/reviews-next.svg") no-repeat center center;
-    background-size: 22px 41px;
   }
 }
 .reviews__toggles {

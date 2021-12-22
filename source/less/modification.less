@@ -9,11 +9,20 @@
 .modification__button {
   margin-right: 35px;
   border: none;
+  cursor: pointer;
   &:last-child {
     margin-right: 0;
   }
 }
 .modification__button--current {
+}
+.modification__button--inactive {
+  & svg {
+    opacity: 0.3;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 .modification__button--size {
 }
