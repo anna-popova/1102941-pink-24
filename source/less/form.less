@@ -109,15 +109,18 @@
     margin-left: 0;
   }
 }
-.form__lable--mobile-hidden {
-  display: none;
+.form__lable--tablet-desctop-displayed {
+  @media screen and (max-width: @mobile-width-only) {
+    display: none;
+  }
   @media screen and (min-width: @tablet-width) {
-    display: block;
+    width: fit-content;
+    margin: 0 auto;
     padding-right: 14px;
     padding-left: 14px;
   }
 }
-.form__lable--mobile {
+.form__lable--mobile-displayed {
   width: 218px;
   margin: 0 auto 35px auto;
   text-align: center;
@@ -198,7 +201,6 @@
 .form__fieldset--app {
   @media screen and (min-width: @tablet-width) {
     order: 3;
-    padding: 50px 60px;
   }
   @media screen and (min-width: @desktop-width) {
     width: 50%;
@@ -217,13 +219,43 @@
     width: 45.5%;
   }
 }
+.form__contacts-block--tel {
+  @media screen and (min-width: @tablet-width) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: block;
+      width: 57px;
+      height: 55px;
+      background-color: #e5e5e5;
+    }
+  }
+}
+.form__contacts-block--email {
+  @media screen and (min-width: @tablet-width) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: block;
+      width: 57px;
+      height: 55px;
+      background-color: #e5e5e5;
+    }
+  }
+}
 .form__input-container {
   margin-bottom: 45px;
   &:last-child {
     margin-bottom: 0;
   }
   @media screen and (min-width: @desktop-width) {
-    width: 30%;
+    width: 33%;
     margin-bottom: 0;
   }
 }
@@ -268,21 +300,60 @@
     margin-bottom: 38px;
   }
 }
-.form__input--text {
+.form__input--text,
+.form__textarea {
   font-family: inherit;
   font-size: 18px;
-  @media screen and (min-width: @tablet-width) {
-    flex-grow: 1;
+  border-radius: 3px;
+  outline: none;
+  &:hover {
+    border-color: @blue;
+  }
+  &:active {
+    border-color: @pink;
   }
   &::placeholder {
     color: @blue;
   }
+  @media screen and (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+}
+.form__input--text-only {
+  min-height: 59px;
 }
 .form__input--checkbox {
-  margin-right: 22px;
-  @media screen and (min-width: @desktop-width) {
-    margin-bottom: 0;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  outline: none;
+  &:hover ~ .form__input--checkbox-text::before {
+    border: 2px solid @blue;
+    border-radius: 3px;
   }
+  &:active ~ .form__input--checkbox-text::before {
+    border: 2px solid @pink;
+    border-radius: 3px;
+  }
+  &:checked ~ .form__input--checkbox-text::before {
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 22px 16px;
+  }
+}
+.form__input--checkbox-text {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    margin-right: 22px;
+    border: 2px solid #e5e5e5;
+    border-radius: 3px;
+    }
 }
 .form__input--tel {
   @media screen and (min-width: @tablet-width) {
@@ -290,13 +361,74 @@
     margin-bottom: 0;
   }
 }
+.form__phone-icon {
+  @media screen and (max-width: @mobile-width-only) {
+    display: none;
+  }
+  @media screen and (min-width: @tablet-width) {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+}
 .form__input--email {
   @media screen and (min-width: @tablet-width) {
     order: 1;
   }
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+.form__email-icon {
+  @media screen and (max-width: @mobile-width-only) {
+    display: none;
+  }
+  @media screen and (min-width: @tablet-width) {
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    z-index: 9999;
+  }
+}
+.form__radio-wrp {
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .form__input--radio {
-  margin-right: 30px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  outline: none;
+  &:hover ~ .form__input--text-radio::before {
+    border: 2px solid @blue;
+    border-radius: 50%;
+  }
+  &:active ~ .form__input--text-radio::before {
+    border: 2px solid @pink;
+    border-radius: 50%;
+  }
+  &:checked ~ .form__input--text-radio::before {
+    background-image: url("../img/elipse.svg");
+    background-repeat: no-repeat;
+    background-position: top 8px left 8px;
+    background-size: 15px;
+  }
+}
+.form__input--text-radio {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    margin-right: 22px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    }
 }
 .form__textarea {
   min-height: 200px;

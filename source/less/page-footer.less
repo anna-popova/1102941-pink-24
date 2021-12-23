@@ -30,22 +30,31 @@
   height: 40px;
   margin: 0 auto 40px auto;
   cursor: pointer;
-  @media screen and (max-width: @mobile-width-only) {
-    width: 145px;
-    height: 40px;
-    background: url("../img/logo-mobile-footer.svg") no-repeat center center;
-  }
+
   @media screen and (min-width: @tablet-width) {
     margin: 0;
-    width: 145px;
-    height: 40px;
-    margin-bottom: 0;
-    background: url("../img/logo-mobile-footer.svg") no-repeat center center;
   }
+}
+.page-footer__pink-logo {
+  fill: #000000;
+  &:hover {
+    fill: @pink;
+  }
+  &:active {
+    fill: #000000;
+    opacity: 0.3;
+  }
+}
+.page-footer__pink-logo--visible-mobile-tablet {
   @media screen and (min-width: @desktop-width) {
-    width: 147px;
-    height: 40px;
-    background: url("../img/logo-dektop-footer.svg") no-repeat center center;
+    display: none;
+  }
+}
+.page-footer__pink-logo--visible-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 .page-footer__social {
