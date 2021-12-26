@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Приложение для работы с фотографиями PINK</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
@@ -451,27 +451,7 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-
-      var isOpen = false;
-      var button = document.getElementById("nav-btn");
-      var headerBlock = document.getElementById("page-header");
-      var navBlock = document.getElementById("main-nav");
-      button.addEventListener("click", function (e) {
-        isOpen = !isOpen;
-        if (isOpen) {
-          headerBlock.classList.add("page-header__wrapper--bg");
-          navBlock.classList.add("main-nav__list--open");
-          button.classList.add("main-nav__toggle--close");
-        } else {
-          headerBlock.classList.remove("page-header__wrapper--bg");
-          navBlock.classList.remove("main-nav__list--open");
-          button.classList.remove("main-nav__toggle--close");
-        }
-      }, false);
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
