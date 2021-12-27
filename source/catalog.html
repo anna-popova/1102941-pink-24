@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Галерея фотографий пользователей</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
@@ -138,9 +138,7 @@
                 смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="gallery__likes gallery__likes--top likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 215</span>
               </div>
@@ -169,9 +167,7 @@
               <p class="gallery__caption">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 356</span>
               </div>
@@ -197,9 +193,7 @@
               <p class="gallery__caption">Соседи будут рады!</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 666</span>
               </div>
@@ -227,9 +221,7 @@
               <p class="gallery__caption">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 215</span>
               </div>
@@ -257,9 +249,7 @@
               <p class="gallery__caption">Самая кубанская в мире!</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 4</span>
               </div>
@@ -285,9 +275,7 @@
               <p class="gallery__caption">Где снег-то?</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 150</span>
               </div>
@@ -313,9 +301,7 @@
               <p class="gallery__caption">Всем GM и взаимные лайки!</p>
               <div class="gallery__likes likes">
                 <button class="likes__heart" type="button">
-                  <svg width="47" height="56">
-                    <use xlink:href="img/sprite.svg#heart-icon" width="13" height="12"></use>
-                  </svg>
+                  <img src="img/sprite/heart.svg" width="47" height="56" alt="Поставить лайк фотографии">
                 </button>
                 <span class="likes__number">Нравится: 2560</span>
               </div>
@@ -333,12 +319,12 @@
 
         <div class="new-post__img-block">
           <picture>
-            <source srcset="img/road-tablet.jpg 1x, img/road-tablet@2x.jpg 2x" media="(min-width: 660px)">
             <source type="image/webp" srcset="img/road-tablet.webp 1x, img/road-tablet@2x.webp 2x"
               media="(min-width: 660px)">
-            <source srcset="img/road-mobile.jpg 1x, img/road-mobile@2x.jpg 2x" media="(max-width: 659px)">
+            <source srcset="img/road-tablet.jpg 1x, img/road-tablet@2x.jpg 2x" media="(min-width: 660px)">
             <source type="image/webp" srcset="img/road-mobile.webp 1x, img/road-mobile@2x.webp 2x"
               media="(max-width: 659px)">
+            <source srcset="img/road-mobile.jpg 1x, img/road-mobile@2x.jpg 2x" media="(max-width: 659px)">
             <img class="new-post__img" src="img/road-tablet.jpg" srcset="img/road-tablet@2x.jpg 2x"
               alt="Дорога через лес в зимнее время">
           </picture>
@@ -565,27 +551,7 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-
-      var isOpen = false;
-      var button = document.getElementById("nav-btn");
-      var headerBlock = document.getElementById("page-header");
-      var navBlock = document.getElementById("main-nav");
-      button.addEventListener("click", function (e) {
-        isOpen = !isOpen;
-        if (isOpen) {
-          headerBlock.classList.add("page-header__wrapper--bg");
-          navBlock.classList.add("main-nav__list--open");
-          button.classList.add("main-nav__toggle--close");
-        } else {
-          headerBlock.classList.remove("page-header__wrapper--bg");
-          navBlock.classList.remove("main-nav__list--open");
-          button.classList.remove("main-nav__toggle--close");
-        }
-      }, false);
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
