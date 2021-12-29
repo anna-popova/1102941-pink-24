@@ -190,16 +190,18 @@
               <label class="form__lable form__lable--indent form__lable--tel" for="tel">Номер телефона</label>
               <input class="form__input form__input--text form__input--text-only form__input--tel" name="tel" type="tel"
                 id="tel" placeholder="Номер, пожалуйста">
-              <img class="form__phone-icon" src="img/sprite/phone-icon.svg" width="20" height="19"
-                alt="Иконка телефона">
+              <svg class="form__phone-icon" width="20" height="19">
+                <use xlink:href="img/sprite.svg#phone-icon"></use>
+              </svg>
             </div>
 
             <div class="form__contacts-block form__contacts-block--email">
               <label class="form__lable form__lable--indent form__lable--email" for="email">Адрес почты</label>
               <input class="form__input form__input--text form__input--text-only form__input--email" name="email"
                 type="email" id="email" placeholder="Введите почту *" required>
-              <img class="form__email-icon" src="img/sprite/email-icon.svg" width="18" height="13"
-                alt="Иконка конверта">
+              <svg class="form__email-icon" width="18" height="13">
+                <use xlink:href="img/sprite.svg#email-icon"></use>
+              </svg>
             </div>
 
           </fieldset>
