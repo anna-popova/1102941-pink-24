@@ -43,8 +43,8 @@
   @media screen and (min-width: @tablet-width) {
     display: block;
     width: 24px;
-
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 48px;
   }
@@ -69,8 +69,8 @@
 .range-block__runner {
   width: 240px;
   background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
   appearance: none;
 
   &::-webkit-slider-runnable-track {
@@ -90,12 +90,13 @@
     cursor: pointer;
     width: 14px;
     height: 14px;
-    -webkit-appearance: none;
+    appearance: none;
+    // -webkit-appearance: none;
     margin-top: -6px;
 
-      &:active {
-        background: @pink;
-      }
+    &:active {
+      background: @pink;
+    }
   }
 
   &::-moz-range-thumb {
@@ -105,12 +106,13 @@
     cursor: pointer;
     width: 14px;
     height: 14px;
-    -webkit-appearance: none;
+    appearance: none;
+    // -webkit-appearance: none;
     margin-top: -6px;
-    
-      &:active {
+
+    &:active {
       background: @pink;
-      }
+    }
   }
 
   @media screen and (min-width: @tablet-width) {

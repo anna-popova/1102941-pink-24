@@ -143,8 +143,7 @@
     display: block;
     width: 50%;
     height: 30px;
-    background: #ffffff;
-    background: linear-gradient(to top right, #ffffff 50%, rgba(255,0,0,0) 50%);
+    background: linear-gradient(to top right, #ffffff 50%, rgba(255, 0, 0, 0) 50%);
     transform: rotate(180deg);
 
     @media screen and (min-width: @tablet-width) {
@@ -156,24 +155,23 @@
     }
   }
 
-&::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: 0;
-  display: block;
-  width: 50%;
-  height: 30px;
-  background: #ffffff;
-  background: linear-gradient(to top left, #ffffff 50%, rgba(255,0,0,0) 50%);
-  transform: rotate(180deg);
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 30px;
+    background: linear-gradient(to top left, #ffffff 50%, rgba(255, 0, 0, 0) 50%);
+    transform: rotate(180deg);
 
-  @media screen and (min-width: @tablet-width) {
-    height: 70px;
-  }
-  
-  @media screen and (min-width: @desktop-width) {
-    height: 100px;
-  }
+    @media screen and (min-width: @tablet-width) {
+      height: 70px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      height: 100px;
+    }
   }
 }
