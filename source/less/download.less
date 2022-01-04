@@ -1,34 +1,40 @@
 .download {
   background-color: @dark-blue;
+
   @media screen and (min-width: @tablet-width) {
     background-image: url("../img/download-screen-tablet.png"),
-    url("../img/download-phone-tablet.png"),
-    url("../img/download-back-tablet.jpg");
+      url("../img/download-phone-tablet.png"),
+      url("../img/download-back-tablet.jpg");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 195px 346px, 660px 545px, cover;
     background-position: right 93px bottom 144px, right bottom, center center;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/download-screen-tablet@2x.png"),
-      url("../img/download-phone-tablet@2x.png"),
-      url("../img/download-back-tablet@2x.jpg");
+        url("../img/download-phone-tablet@2x.png"),
+        url("../img/download-back-tablet@2x.jpg");
     }
   }
+
   @media screen and (min-width: @desktop-width) {
     background-image: url("../img/download-screen-desktop.png"),
-    url("../img/download-phone-desktop.png"),
-    url("../img/download-back-desktop.jpg");
+      url("../img/download-phone-desktop.png"),
+      url("../img/download-back-desktop.jpg");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 230px 408px, 1050px 645px, cover;
     background-position: right 250px bottom 173px, right bottom, center center;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/download-screen-desktop@2x.png"),
-      url("../img/download-phone-desktop@2x.png"),
-      url("../img/download-back-desktop@2x.jpg");
+        url("../img/download-phone-desktop@2x.png"),
+        url("../img/download-back-desktop@2x.jpg");
     }
   }
 }
+
 .download__wrapper {
   padding-bottom: 35px;
+
   @media screen and (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
@@ -36,72 +42,87 @@
     width: 55%;
     padding-bottom: 120px;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-bottom: 130px;
   }
 }
+
 .download__top-block {
   padding: 95px 20px 320px 20px;
   background-image: url("../img/download-screen.png"),
-  url("../img/download-phone.png"),
-  url("../img/download-back-mobile.jpg");
+    url("../img/download-phone.png"),
+    url("../img/download-back-mobile.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 111px 197px, 320px 286px, cover;
   background-position: left 104px bottom 57px, left bottom, center center;
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/download-screen@2x.png"),
-    url("../img/download-phone@2x.png"),
-    url("../img/download-back-mobile@2x.jpg");
+      url("../img/download-phone@2x.png"),
+      url("../img/download-back-mobile@2x.jpg");
   }
+
   @media screen and (min-width: @tablet-width) {
     margin-bottom: 50px;
     padding-top: 210px;
     padding-bottom: 0;
     background-image: none;
   }
+
   @media screen and (min-width: @desktop-width) {
     margin-bottom: 50px;
     padding-top: 220px;
   }
 }
+
 .download__text-block {
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
   color: @white;
   text-align: center;
+
   @media screen and (min-width: @tablet-width) {
     width: 85%;
     margin: 0 auto;
     font-size: 40px;
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 55%;
     font-size: 50px;
     line-height: 1.3;
   }
 }
+
 .download__button-block {
   padding: 28px 20px 0 20px;
+
   @media screen and (min-width: @desktop-width) {
     padding-top: 0;
   }
 }
+
 .download__button {
   width: 280px;
   font-size: 18px;
+
   @media screen and (min-width: @tablet-width) {
     width: 300px;
   }
 }
+
 .download__text-block--smaller {
   font-size: 14px;
   line-height: 1.7;
+
   @media screen and (min-width: @tablet-width) {
     width: 100%;
     font-size: 16px;
     line-height: 1.3;
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 60%;
     font-size: 18px;

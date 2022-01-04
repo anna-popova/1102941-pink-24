@@ -1,8 +1,10 @@
 .range-block__list {
   text-align: center;
 }
+
 .range-block__item {
   display: none;
+
   @media screen and (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -10,44 +12,55 @@
     margin: 0 auto 25px auto;
     padding: 0 18px 25px 4px;
     border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 100%;
     margin-bottom: 15px;
     padding: 0 30px 13px 0;
+
     &:last-child {
       border-bottom: none;
     }
   }
 }
+
 .range-block__item--current {
   display: block;
+
   @media screen and (min-width: @tablet-width) {
     display: flex;
   }
 }
+
 .range-block__img-wrap {
   display: none;
+
   @media screen and (min-width: @tablet-width) {
     display: block;
     width: 24px;
   }
+
   @media screen and (min-width: @desktop-width) {
     width: 48px;
   }
 }
+
 .range-block__icon--visible-tablet {
   @media screen and (min-width: @desktop-width) {
     display: none;
   }
 }
+
 .range-block__icon--visible-desktop {
   @media screen and (min-width: @tablet-width) {
     display: none;
   }
+
   @media screen and (min-width: @desktop-width) {
     display: inline-block;
   }
@@ -77,11 +90,13 @@
     cursor: pointer;
     width: 14px;
     height: 14px;
+    appearance: none;
     -webkit-appearance: none;
     margin-top: -6px;
-      &:active {
-        background: @pink;
-      }
+
+    &:active {
+      background: @pink;
+    }
   }
 
   &::-moz-range-thumb {
@@ -91,11 +106,13 @@
     cursor: pointer;
     width: 14px;
     height: 14px;
+    appearance: none;
     -webkit-appearance: none;
     margin-top: -6px;
-      &:active {
+
+    &:active {
       background: @pink;
-      }
+    }
   }
 
   @media screen and (min-width: @tablet-width) {
@@ -105,10 +122,4 @@
   @media screen and (min-width: @desktop-width) {
     width: 70%;
   }
-}
-.range-block__runner--size {
-}
-.range-block__runner--fill {
-}
-.range-block__runner--contrast {
 }

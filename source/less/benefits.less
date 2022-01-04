@@ -1,49 +1,60 @@
 .benefits__wrapper {
   padding-top: 46px;
   text-align: center;
+
   @media screen and (min-width: @tablet-width) {
     padding-top: 58px;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-top: 77px;
   }
 }
+
 .benefits__text-block {
   margin: 0 auto 70px auto;
   padding-right: 20px;
   padding-left: 20px;
   min-width: 280px;
+
   @media screen and (min-width: @tablet-width) {
     min-width: 588px;
     margin-bottom: 80px;
   }
+
   @media screen and (min-width: @desktop-width) {
     min-width: 780px;
     margin-bottom: 150px;
   }
 }
+
 .benefits__text {
   margin-bottom: 45px;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 300;
   color: @blue;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   @media screen and (min-width: @tablet-width) {
     margin-bottom: 0;
     font-size: 40px;
     line-height: 1.3;
   }
+
   @media screen and (min-width: @desktop-width) {
     font-size: 50px;
   }
 }
+
 .benefits__list {
   position: relative;
   padding: 45px 20px 0 20px;
   background-color: @gray;
+
   &::before {
     content: "";
     position: absolute;
@@ -52,15 +63,18 @@
     display: block;
     width: 100%;
     height: 30px;
-    background: linear-gradient(to top left, @gray 50%, rgba(255,0,0,0) 50%);
+    background: linear-gradient(to top left, @gray 50%, rgba(255, 0, 0, 0) 50%);
     transform: translateY(-100%);
+
     @media screen and (min-width: @tablet-width) {
       height: 40px;
     }
+
     @media screen and (min-width: @desktop-width) {
       height: 100px;
     }
   }
+
   &::after {
     content: "";
     display: block;
@@ -68,14 +82,16 @@
     height: 270px;
     margin: 40px auto 0 auto;
     background-image: url("../img/benefits-screen-mobile.png"),
-    url("../img/benefits-iphone-mobile.png");
+      url("../img/benefits-iphone-mobile.png");
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom -12px, center bottom -50px;
     background-size: 136px 245px, 157px 320px;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/benefits-screen-mobile@2x.png"),
-      url("../img/benefits-iphone-mobile@2x.png");
+        url("../img/benefits-iphone-mobile@2x.png");
     }
+
     @media screen and (min-width: @tablet-width) {
       position: absolute;
       left: 0;
@@ -84,23 +100,27 @@
       height: 547px;
       margin: 0;
       background-image: url("../img/benefits-screen-tablet.png"),
-      url("../img/benefits-iphone-tablet.png");
+        url("../img/benefits-iphone-tablet.png");
       background-repeat: no-repeat, no-repeat;
       background-position: left 35px bottom, left 20px bottom -61px;
       background-size: 237px 421px, 268px 547px;
+
       @media (min-resolution: 2dppx) {
         background-image: url("../img/benefits-screen-tablet@2x.png"),
-        url("../img/benefits-iphone-tablet@2x.png");
+          url("../img/benefits-iphone-tablet@2x.png");
       }
     }
+
     @media screen and (min-width: @desktop-width) {
       display: none;
     }
   }
+
   @media screen and (min-width: @tablet-width) {
     text-align: left;
     padding: 20px 20px 30px 330px;
   }
+
   @media screen and (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -109,11 +129,14 @@
     text-align: center;
   }
 }
+
 .benefits__item {
   margin-bottom: 40px;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   @media screen and (min-width: @desktop-width) {
     position: relative;
     width: 300px;
@@ -122,6 +145,7 @@
     text-align: center;
   }
 }
+
 .benefits__item--mood {
   @media screen and (min-width: @desktop-width) {
     &::before {
@@ -132,19 +156,21 @@
       width: 300px;
       height: 382px;
       background-image: url("../img/benefits-screen-desktop-gray.png"),
-                        url("../img/benefits-iphone-desktop.png"),
-                        url("../img/benefits-shadow-desktop.png");
+        url("../img/benefits-iphone-desktop.png"),
+        url("../img/benefits-shadow-desktop.png");
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+
       @media (min-resolution: 2dppx) {
         background-image: url("../img/benefits-screen-desktop-gray@2x.png"),
-        url("../img/benefits-iphone-desktop@2x.png"),
-        url("../img/benefits-shadow-desktop@2x.png");
+          url("../img/benefits-iphone-desktop@2x.png"),
+          url("../img/benefits-shadow-desktop@2x.png");
       }
     }
   }
 }
+
 .benefits__item--world-around {
   @media screen and (min-width: @desktop-width) {
     &::before {
@@ -155,19 +181,21 @@
       width: 300px;
       height: 382px;
       background-image: url("../img/benefits-screen-desktop-pink.png"),
-                        url("../img/benefits-iphone-desktop.png"),
-                        url("../img/benefits-shadow-desktop.png");
+        url("../img/benefits-iphone-desktop.png"),
+        url("../img/benefits-shadow-desktop.png");
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+
       @media (min-resolution: 2dppx) {
         background-image: url("../img/benefits-screen-desktop-pink@2x.png"),
-        url("../img/benefits-iphone-desktop@2x.png"),
-        url("../img/benefits-shadow-desktop@2x.png");
+          url("../img/benefits-iphone-desktop@2x.png"),
+          url("../img/benefits-shadow-desktop@2x.png");
       }
     }
   }
 }
+
 .benefits__item--friends {
   @media screen and (min-width: @desktop-width) {
     &::before {
@@ -178,35 +206,40 @@
       width: 300px;
       height: 382px;
       background-image: url("../img/benefits-screen-desktop-smile.png"),
-                        url("../img/benefits-iphone-desktop.png"),
-                        url("../img/benefits-shadow-desktop.png");
+        url("../img/benefits-iphone-desktop.png"),
+        url("../img/benefits-shadow-desktop.png");
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: center bottom -7px, center bottom -50px, center bottom -6px;
       background-size: 165px 294px, 186px 382px, 300px 17px;
+
       @media (min-resolution: 2dppx) {
         background-image: url("../img/benefits-screen-desktop-smile@2x.png"),
-        url("../img/benefits-iphone-desktop@2x.png"),
-        url("../img/benefits-shadow-desktop@2x.png");
+          url("../img/benefits-iphone-desktop@2x.png"),
+          url("../img/benefits-shadow-desktop@2x.png");
       }
     }
   }
 }
+
 .benefits__title {
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.3;
   font-weight: 700;
   color: #000000;
+
   @media screen and (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 1;
   }
 }
+
 .benefits__description {
   font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
   color: @blue;
+
   @media screen and (min-width: @desktop-width) {
     width: 245px;
     margin: 0 auto;

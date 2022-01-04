@@ -1,16 +1,17 @@
-.social {
-}
 .social__list {
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
+
 .social__item {
   margin-right: 14px;
+
   &:last-child {
     margin-right: 0;
   }
 }
+
 .social__link {
   display: flex;
   justify-content: center;
@@ -19,16 +20,20 @@
   height: 48px;
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
+
   &:hover {
     border-color: @blue;
   }
+
   &:active {
     border-color: rgba(40, 54, 69, 0.1);
+
     & svg {
       opacity: 0.3;
     }
   }
 }
+
 .social__link--youtube {
   & svg {
     margin-left: 4px;

@@ -2,31 +2,35 @@
   @media screen and (max-width: @mobile-width-only) {
     display: none;
   }
+
   @media screen and (min-width: @tablet-width) {
     background-color: @white;
   }
+
   @media screen and (min-width: @desktop-width) {
     background-color: @gray;
   }
 }
+
 .article__wrapper {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
   padding: 90px 20px 60px 330px;
   background-image: url("../img/diagram-fill.svg"),
-  url("../img/timer.svg");
+    url("../img/timer.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: 202px 202px, 238px 276px;
   background-position: left 38px top 112px, left 20px top 55px;
+
   @media screen and (min-width: @desktop-width) {
     max-width: none;
     padding: 115px 165px 120px 500px;
     background-size: 252px 252px, 298px 345px;
-    //добавить position для розового кольца
     background-position: left 153px top 101px, left 130px top 30px;
   }
 }
+
 .article__time {
   position: absolute;
   top: 153px;
@@ -35,34 +39,41 @@
   line-height: 1;
   font-weight: 700;
   color: @pink;
+
   @media screen and (min-width: @desktop-width) {
     top: 155px;
     left: 200px;
     font-size: 138px;
   }
 }
+
 .article__title {
   margin-bottom: 10px;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
+
   @media screen and (min-width: @desktop-width) {
     margin-bottom: 25px;
+
     & br {
       display: none;
     }
   }
 }
+
 .article__text {
   margin-bottom: 15px;
   font-size: 14px;
   line-height: 1.7;
   color: @blue;
+
   @media screen and (min-width: @desktop-width) {
     margin-bottom: 35px;
     font-size: 18px;
   }
 }
+
 .article__link {
   color: @pink;
   text-decoration: underline;

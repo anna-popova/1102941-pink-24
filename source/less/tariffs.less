@@ -1,6 +1,7 @@
 .tariffs {
   position: relative;
   background-color: @gray;
+
   &::before {
     content: "";
     position: absolute;
@@ -9,16 +10,19 @@
     display: block;
     width: 100%;
     height: 30px;
-    background: linear-gradient(to top left, @gray 50%, rgba(255,0,0,0) 50%);
+    background: linear-gradient(to top left, @gray 50%, rgba(255, 0, 0, 0) 50%);
     transform: translateY(-100%);
+
     @media screen and (min-width: @tablet-width) {
       height: 40px;
     }
+
     @media screen and (min-width: @desktop-width) {
       height: 100px;
     }
   }
 }
+
 .tariffs__wrapper {
   @media screen and (max-width: @mobile-width-only) {
     overflow: hidden;
@@ -26,73 +30,90 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
+
   @media screen and (min-width: @tablet-width) {
     padding: 55px 20px 70px 20px;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-right: 130px;
     padding-left: 130px;
   }
 }
+
 .tariffs__table {
   margin: 0 auto 40px auto;
   border-collapse: collapse;
+
   @media screen and (max-width: @mobile-width-only) {
     position: absolute;
     width: 260%;
     left: -80%;
   }
+
   @media screen and (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 }
+
 .tariffs__row {
   background-color: @white;
 }
+
 .tariffs__header {
   overflow: hidden;
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: @blue;
   border: 2px solid #e5e5e5;
+
   @media screen and (min-width: @tablet-width) {
     padding-top: 20px;
     padding-bottom: 15px;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 }
+
 .tariffs__header--hidden {
   background-color: @gray;
   border: none;
-    @media screen and (max-width: @mobile-width-only) {
-      display: none;
-    }
+
+  @media screen and (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
+
 .tariffs__header--hit {
   position: relative;
 }
+
 .tariffs__name {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   color: @white;
   text-transform: uppercase;
+
   @media screen and (min-width: @desktop-width) {
     margin-bottom: 10px;
     font-size: 18px;
   }
 }
+
 .tariffs__price {
   font-size: 18px;
   font-weight: 300;
   color: @white;
+
   @media screen and (min-width: @desktop-width) {
     font-size: 24px;
   }
 }
+
 .tariffs__hit {
   position: absolute;
   top: 15px;
@@ -105,62 +126,76 @@
   background-color: @pink;
   transform: rotate(-45deg);
 }
+
 .tariffs__data {
   border: 2px solid #e5e5e5;
+
   @media screen and (max-width: @mobile-width-only) {
     position: relative;
     width: 276px;
     height: 59px;
     padding-left: 20px;
     padding-right: 17px;
+
     & svg {
       position: absolute;
       right: 20px;
     }
   }
+
   @media screen and (min-width: @tablet-width) {
     width: 7%;
     min-width: 152px;
     height: 45px;
   }
+
   @media screen and (min-width: @desktop-width) {
     min-width: 235px;
     height: 59px;
   }
 }
+
 .tariffs__data--text {
   @media screen and (max-width: @mobile-width-only) {
     display: none;
   }
+
   @media screen and (min-width: @tablet-width) {
     padding-left: 15px;
     font-size: 14px;
     color: @blue;
   }
+
   @media screen and (min-width: @desktop-width) {
     padding-left: 22px;
     font-size: 18px;
   }
 }
+
 .tariffs__data--icon {
   @media screen and (min-width: @tablet-width) {
     padding-top: 8px;
     text-align: center;
   }
 }
+
 .tariffs__include {
   font-size: 14px;
   color: @blue;
   text-transform: uppercase;
+
   @media screen and (min-width: @tablet-width) {
     display: none;
   }
 }
+
 .tariffs__toggles {
   text-align: center;
+
   @media screen and (max-width: @mobile-width-only) {
     margin-top: 310px;
   }
+
   @media screen and (min-width: @tablet-width) {
     display: none;
   }

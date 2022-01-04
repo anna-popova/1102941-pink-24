@@ -1,26 +1,31 @@
 .likes {
   display: flex;
   align-items: center;
+
   @media screen and (min-width: @tablet-width) {
     justify-content: space-between;
   }
 }
+
 .likes__heart {
   border: none;
   background-color: inherit;
   width: 13px;
   height: 12px;
   margin-right: 18px;
+
   @media screen and (min-width: @tablet-width) {
     order: 2;
     margin-right: 0;
   }
 }
+
 .likes__number {
   font-size: 12px;
   font-weight: 400;
   color: @pink;
   text-transform: uppercase;
+
   @media screen and (min-width: @tablet-width) {
     order: 1;
   }
