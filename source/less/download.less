@@ -7,7 +7,7 @@
       url("../img/download-back-tablet.jpg");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 195px 346px, 660px 545px, cover;
-    background-position: right 93px bottom 144px, right bottom, center center;
+    background-position: right 93px bottom 144px, right bottom, center top -5px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/download-screen-tablet@2x.png"),
@@ -64,9 +64,9 @@
   }
 
   @media screen and (min-width: @tablet-width) {
-    margin-bottom: 50px;
-    padding-top: 210px;
+    padding-top: 205px;
     padding-bottom: 0;
+    padding-left: 0;
     background-image: none;
   }
 
@@ -84,7 +84,7 @@
   text-align: center;
 
   @media screen and (min-width: @tablet-width) {
-    width: 85%;
+    width: 190px;
     margin: 0 auto;
     font-size: 40px;
   }
@@ -99,6 +99,9 @@
 .download__button-block {
   padding: 28px 20px 0 20px;
 
+  @media screen and (min-width: @tablet-width) {
+    padding-left: 0;
+  }
   @media screen and (min-width: @desktop-width) {
     padding-top: 0;
   }
@@ -110,6 +113,8 @@
 
   @media screen and (min-width: @tablet-width) {
     width: 300px;
+    min-height: 55px;
+    padding-top: 16px;
   }
 }
 
@@ -118,8 +123,8 @@
   line-height: 1.7;
 
   @media screen and (min-width: @tablet-width) {
-    width: 100%;
-    font-size: 16px;
+    width: 297px;
+    font-size: 18px;
     line-height: 1.3;
   }
 
