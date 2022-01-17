@@ -29,9 +29,9 @@
   }
   @media screen and (min-width: @desktop-width) {
     max-width: 1200px;
-    padding: 115px 165px 120px 500px;
+    padding: 100px 165px 120px 500px;
     background-size: 252px 252px, 298px 345px;
-    background-position: left 153px top 101px, left 130px top 30px;
+    background-position: left 153px top 75px, left 130px top 5px;
   }
 }
 
@@ -45,9 +45,9 @@
   color: @pink;
 
   @media screen and (min-width: @desktop-width) {
-    top: 155px;
-    left: 200px;
-    font-size: 138px;
+    top: 140px;
+    left: 210px;
+    font-size: 120px;
   }
 }
 
@@ -58,7 +58,7 @@
   font-weight: 700;
 
   @media screen and (min-width: @desktop-width) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     & br {
       display: none;
@@ -72,8 +72,14 @@
   line-height: 1.7;
   color: @blue;
 
+  & br {
+    @media screen and (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: @desktop-width) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 18px;
   }
 }
