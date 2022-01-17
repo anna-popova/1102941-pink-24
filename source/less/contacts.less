@@ -12,13 +12,12 @@
 
 .contacts__text-block {
   width: 85%;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 34px auto;
   text-align: center;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 300;
   color: @blue;
-  text-transform: uppercase;
 
   @media screen and (min-width: @tablet-width) {
     width: 550px;
@@ -34,7 +33,7 @@
 
 .contacts__list {
   width: 85%;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 37px auto;
   text-align: center;
 
   @media screen and (min-width: @tablet-width) {
@@ -55,7 +54,11 @@
 }
 
 .contacts__item {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+
+  &:nth-child(2) {
+    margin-bottom: 20px;
+  }
 
   &:last-child {
     margin-bottom: 0;
