@@ -1,9 +1,9 @@
 .gallery__wrapper {
-  padding-top: 54px;
-  padding-bottom: 48px;
+  padding-top: 45px;
+  padding-bottom: 43px;
 
   @media screen and (min-width: @tablet-width) {
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 78px;
   }
 }
@@ -30,24 +30,25 @@
 }
 
 .gallery__text--top {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   @media screen and (min-width: @tablet-width) {
-    margin-bottom: 85px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: @desktop-width) {
-    margin-bottom: 97px;
+    margin-bottom: 90px;
   }
 }
 
 .gallery__list {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 
   @media screen and (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 40px;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -57,7 +58,7 @@
 }
 
 .gallery__item {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -65,6 +66,7 @@
 
   @media screen and (min-width: @tablet-width) {
     width: 300px;
+    margin-bottom: 27px;
 
     &:nth-child(2n) {
       margin-right: 20px;
@@ -84,7 +86,7 @@
   }
 
   @media screen and (min-width: @desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1260px) {
@@ -97,6 +99,7 @@
 .gallery__item--top {
   @media screen and (min-width: @tablet-width) {
     width: 100%;
+    margin-bottom: 50px;
   }
 }
 
@@ -169,19 +172,15 @@
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
-  padding: 26px 10px 26px 17px;
+  padding: 18px 10px 26px 17px;
   background-color: rgb(242, 242, 242);
 
   @media screen and (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     max-width: 300px;
-    min-height: 175px;
-    padding: 30px;
-  }
-
-  @media screen and (min-width: @desktop-width) {
-    min-height: 185px;
+    min-height: 150px;
+    padding: 20px 30px;
   }
 }
 
@@ -191,6 +190,7 @@
 
   @media screen and (min-width: @tablet-width) {
     width: 94%;
+    min-height: 120px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -200,11 +200,12 @@
 
   @media screen and (min-width: @desktop-width) {
     width: 78.5%;
+    min-height: 96px;
   }
 }
 
 .gallery__autor-time {
-  margin-bottom: 14px;
+  margin-bottom: 5px;
 }
 
 .gallery__autor-time--top {
@@ -223,6 +224,7 @@
   font-size: 12px;
   font-weight: 300;
   color: @blue;
+  text-transform: uppercase;
 }
 
 .gallery__caption {
@@ -230,7 +232,7 @@
   line-height: 1.7;
   font-weight: 400;
   color: @blue;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @media screen and (min-width: @tablet-width) {
     flex-grow: 1;
