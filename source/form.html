@@ -216,7 +216,9 @@
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--gray form__fieldset--app">
-            <legend class="form__lable form__lable--tablet-desctop-displayed">С каким приложением путешествовали?
+            <legend class="form__lable form__lable--tablet-desctop-displayed form__lable--tablet-desctop-displayed-app">
+              С каким приложением
+              путешествовали?
             </legend>
             <label class="form__lable form__lable--mobile-displayed">С каким приложением путешествовали?</label>
 
@@ -239,14 +241,16 @@
 
           <fieldset class="form__fieldset form__fieldset--emotion">
             <legend class="form__lable form__lable--tablet-desctop-displayed">Опишите свои эмоции</legend>
-            <label class="form__lable form__lable--mobile-displayed">Опишите свои эмоции</label>
+            <label class="form__lable form__lable--emotion form__lable--mobile-displayed">Опишите свои эмоции</label>
             <textarea class="form__textarea" name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
 
           <div class="form__bottom-block">
             <button class="form__button button button--green" type="button" id="form-button">Отправить форму</button>
             <p class="form__text form__text--upper">
-              <span class="form__text form__text--pink">*</span> — обязательные поля
+              <span class="form__text form__text--pink">*</span> — обязательные
+              <span class="form__text form__text--for-desktop">для заполнения</span>
+              поля
             </p>
           </div>
 
@@ -260,8 +264,8 @@
           <h2 class="popup__title">Что-то пошло не так!</h2>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
-        <div class="popup__btn-block">
-          <button class="popup__button button button--green" type="button">Ок</button>
+        <div class="popup__btn-block popup__btn-block--fault">
+          <button class="popup__button popup__button--ok button button--green" type="button">Ок</button>
         </div>
       </div>
     </div>

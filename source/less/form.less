@@ -3,15 +3,17 @@
 }
 
 .form__wrapper {
-  padding-top: 54px;
-  padding-bottom: 26px;
+  padding-top: 45px;
+  padding-bottom: 20px;
 
   @media screen and (min-width: @tablet-width) {
-    padding: 100px 22px 50px 22px;
+    padding: 90px 22px 50px 22px;
   }
 
   @media screen and (min-width: @desktop-width) {
-    padding: 100px 130px 75px 130px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 130px 30px 130px;
   }
 }
 
@@ -28,7 +30,7 @@
 }
 
 .form__text {
-  margin-bottom: 38px;
+  margin-bottom: 25px;
   padding-right: 20px;
   padding-left: 20px;
   text-align: center;
@@ -38,17 +40,17 @@
 
   @media screen and (min-width: @tablet-width) {
     order: 1;
-    margin-bottom: 82px;
+    margin-bottom: 73px;
     padding-right: 63px;
     padding-left: 63px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   @media screen and (min-width: @desktop-width) {
-    margin-bottom: 95px;
-    padding-right: 222px;
-    padding-left: 222px;
+    margin-bottom: 70px;
+    padding-right: 90px;
+    padding-left: 90px;
   }
 }
 
@@ -81,8 +83,17 @@
   color: @pink;
 }
 
+.form__text--for-desktop {
+  display: none;
+  @media screen and (min-width: @desktop-width) {
+    display: inline;
+    padding: 0;
+    font-size: 14px;
+  }
+}
+
 .form__name-block {
-  padding-bottom: 44px;
+  padding-bottom: 50px;
 
   @media screen and (max-width: @mobile-width-only) {
     padding-right: 22px;
@@ -95,9 +106,9 @@
   }
 
   @media screen and (min-width: @desktop-width) {
-    width: calc(50% - 74px);
+    width: 53%;
+    padding-top: 17px;
     padding-bottom: 0;
-    margin-right: 74px;
     margin-bottom: 65px;
   }
 }
@@ -115,10 +126,14 @@
       margin-bottom: 0;
     }
   }
+
+  @media screen and (min-width: @desktop-width) {
+    width: 435px;
+  }
 }
 
 .form__lable {
-  margin: 17px;
+  margin: 23px 17px 10px;
   font-size: 14px;
   line-height: 1.3;
   color: @pink;
@@ -152,6 +167,13 @@
   }
 }
 
+.form__lable--tablet-desctop-displayed-app {
+  @media screen and (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .form__lable--mobile-displayed {
   width: 218px;
   margin: 0 auto 35px auto;
@@ -162,21 +184,27 @@
   }
 }
 
+.form__lable--emotion {
+  margin-bottom: 18px;
+}
+
 .form__lable--tel {
   @media screen and (min-width: @tablet-width) {
     order: 2;
-    margin-top: 22px;
+    margin-top: 19px;
     margin-left: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     text-align: left;
   }
 
   @media screen and (min-width: @desktop-width) {
+    margin-top: 22px;
     margin-bottom: 0;
   }
 }
 
 .form__lable--email {
+  margin-top: 0;
   @media screen and (min-width: @tablet-width) {
     order: 2;
     margin-top: 22px;
@@ -200,7 +228,8 @@
   }
 
   @media screen and (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    padding: 46px 58px 52px;
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -219,7 +248,7 @@
 .form__fieldset--achieve {
   @media screen and (min-width: @tablet-width) {
     order: 5;
-    padding: 50px 60px;
+    padding: 43px 58px;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -232,18 +261,19 @@
 }
 
 .form__fieldset--contacts {
-  padding-top: 23px;
+  padding-top: 18px;
+  padding-bottom: 30px;
 
   @media screen and (min-width: @tablet-width) {
     order: 4;
     display: flex;
+    padding-top: 36px;
   }
 
   @media screen and (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding: 29px 60px 20px;
   }
 }
 
@@ -253,14 +283,20 @@
   }
 
   @media screen and (min-width: @desktop-width) {
-    width: 50%;
+    width: 47%;
   }
 }
 
 .form__fieldset--emotion {
+  padding-bottom: 48px;
+
   @media screen and (min-width: @tablet-width) {
     order: 6;
-    padding: 50px 50px;
+    padding: 40px 55px 50px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -308,14 +344,14 @@
 }
 
 .form__input-container {
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media screen and (min-width: @desktop-width) {
-    width: 33%;
+
     margin-bottom: 0;
   }
 }
@@ -341,6 +377,7 @@
 .form__input-container--flex-four {
   @media screen and (min-width: @desktop-width) {
     order: 4;
+    margin-right: 34px;
   }
 }
 
@@ -462,6 +499,7 @@
 .form__input--email {
   @media screen and (min-width: @tablet-width) {
     order: 1;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -488,6 +526,11 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media screen and (min-width: @desktop-width) {
+    margin-left: 20px;
+    margin-bottom: 35px;
+  }
 }
 
 .form__input--radio {
@@ -512,6 +555,10 @@
     background-repeat: no-repeat;
     background-position: top 8px left 8px;
     background-size: 15px;
+
+    @media screen and (min-width: @desktop-width) {
+      background-position: top 10px left 11px;
+    }
   }
 }
 
@@ -525,21 +572,35 @@
     vertical-align: middle;
     width: 35px;
     height: 35px;
-    margin-right: 22px;
+    margin-right: 33px;
     border: 2px solid #e5e5e5;
     border-radius: 50%;
+
+    @media screen and (min-width: @tablet-width) {
+      margin-right: 25px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
 .form__textarea {
   min-height: 200px;
   resize: none;
-  padding: 15px 20px;
+  padding: 12px 19px;
   line-height: 1.6;
   border: 2px solid #e5e5e5;
 
   @media screen and (min-width: @tablet-width) {
-    padding: 20px;
+    min-height: 190px;
+    padding: 10px 20px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    min-height: 130px;
   }
 }
 
@@ -552,6 +613,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 8px;
     padding: 0;
   }
 
@@ -561,7 +623,7 @@
 }
 
 .form__button {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 
   @media screen and (min-width: @tablet-width) {
     order: 7;
