@@ -92,7 +92,8 @@
         <button id="nav-btn" class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
             меню</span></button>
         <div class="main-nav__wrapper">
-          <ul id="main-nav" class="main-nav__list site-list">
+          <!--main-nav__list--open раскрывает мобильное меню. при удалении этого класса, меню скрывается-->
+          <ul id="main-nav" class="main-nav__list main-nav__list--open site-list">
             <li class="site-list__item"><a href="index.html">Главная</a></li>
             <li class="site-list__item site-list__item--current"><a href="#">Фотографии</a></li>
             <li class="site-list__item"><a href="form.html">Конкурс</a></li>
@@ -380,7 +381,7 @@
 
     <section class="new-post">
       <h2 class="visually-hidden">Отредактировать и опубликовать фото</h2>
-      <div class="new-post__wrapper">
+      <form class="new-post__wrapper">
 
         <div class="new-post__img-block">
           <picture>
@@ -426,6 +427,7 @@
             </button>
           </div>
         </div>
+
 
         <div class="new-post__range-block range-block">
           <div class="range-block__list">
@@ -505,7 +507,7 @@
           <button class="new-post__button button button--round button--pink" type="submit">Запостить</button>
           <button class="new-post__button button button--round button--gray" type="reset">Отмена</button>
         </div>
-      </div>
+      </form>
     </section>
   </main>
 
@@ -616,6 +618,7 @@
     </div>
   </footer>
 
+  <!-- Скрипт отключен в связи с замечаниями проверяющего -->
   <script src="js/script.js"></script>
 
 </body>

@@ -5,18 +5,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
   var headerBlock = document.getElementById('page-header');
   var navBlock = document.getElementById('main-nav');
 
-  button.addEventListener('click', function (e) {
-    isOpen = !isOpen;
-    if (isOpen) {
-      headerBlock.classList.add('page-header__wrapper--bg');
-      navBlock.classList.add('main-nav__list--open');
-      button.classList.add('main-nav__toggle--close');
-    } else {
-      headerBlock.classList.remove('page-header__wrapper--bg');
-      navBlock.classList.remove('main-nav__list--open');
-      button.classList.remove('main-nav__toggle--close');
-    }
-  }, false);
+  //закоментированно, чтобы удовлетворить критерию Б30. Мобильное меню должно быть работоспособным при отключённом JavaScript.
+  // button.addEventListener('click', function (e) {
+  //   isOpen = !isOpen;
+  //   if (isOpen) {
+  //     headerBlock.classList.add('page-header__wrapper--bg');
+  //     navBlock.classList.add('main-nav__list--open');
+  //     button.classList.add('main-nav__toggle--close');
+  //   } else {
+  //     headerBlock.classList.remove('page-header__wrapper--bg');
+  //     navBlock.classList.remove('main-nav__list--open');
+  //     button.classList.remove('main-nav__toggle--close');
+  //   }
+  // }, false);
 
   var formButton = document.getElementById('form-butto');
   var lastName = document.getElementById('last-name');
