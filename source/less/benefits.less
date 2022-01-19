@@ -50,9 +50,8 @@
   }
 }
 
-.benefits__list {
+.benefits__list-block {
   position: relative;
-  padding: 50px 20px 0 20px;
   background-color: @gray;
 
   &::before {
@@ -74,6 +73,11 @@
       height: 100px;
     }
   }
+}
+
+.benefits__list {
+  position: relative;
+  padding: 50px 20px 0 20px;
 
   &::after {
     content: "";
@@ -125,6 +129,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 130px 60px 130px;
     text-align: center;
   }

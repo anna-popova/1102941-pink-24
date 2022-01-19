@@ -17,22 +17,35 @@
   }
 
   @media screen and (min-width: @desktop-width) {
-    background-image: url("../img/download-screen-desktop.png"),
-      url("../img/download-phone-desktop.png"),
-      url("../img/download-back-desktop.jpg");
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 230px 408px, 1050px 645px, cover;
-    background-position: right 250px bottom 173px, right bottom, center center;
+    background-image: url("../img/download-back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/download-screen-desktop@2x.png"),
-        url("../img/download-phone-desktop@2x.png"),
-        url("../img/download-back-desktop@2x.jpg");
+      background-image: url("../img/download-back-desktop@2x.jpg");
     }
   }
 }
 
-.download__wrapper {
+.download__external-wrapper {
+  @media screen and (min-width: @desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url("../img/download-screen-desktop.png"),
+      url("../img/download-phone-desktop.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 230px 408px, 1050px 645px;
+    background-position: right 250px bottom 173px, right bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/download-screen-desktop@2x.png"),
+        url("../img/download-phone-desktop@2x.png");
+    }
+  }
+}
+
+.download__inner-wrapper {
   padding-bottom: 30px;
 
   @media screen and (min-width: @tablet-width) {

@@ -7,6 +7,14 @@
 .social__item {
   margin-right: 14px;
 
+  @media screen and (min-width: @tablet-width) {
+    margin-right: 11px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin-right: 7px;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -20,6 +28,16 @@
   height: 48px;
   border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
+
+  @media screen and (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    width: 53px;
+    height: 53px;
+  }
 
   &:hover {
     border-color: @blue;
