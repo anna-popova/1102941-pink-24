@@ -4,13 +4,17 @@
 
   @media screen and (min-width: @tablet-width) {
     padding-top: 90px;
-    padding-bottom: 78px;
+    padding-bottom: 70px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    padding-bottom: 69px;
   }
 }
 
 .gallery__text {
-  padding-right: 35px;
-  padding-left: 35px;
+  padding-right: 31px;
+  padding-left: 31px;
   text-align: center;
   font-size: 14px;
   line-height: 2.1;
@@ -20,7 +24,7 @@
     padding-right: 45px;
     padding-left: 45px;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -32,8 +36,13 @@
 .gallery__text--top {
   margin-bottom: 50px;
 
+  @media screen and (max-width: @mobile-width-only) {
+    padding-right: 33px;
+    padding-left: 34px;
+  }
+
   @media screen and (min-width: @tablet-width) {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 
   @media screen and (min-width: @desktop-width) {
@@ -48,12 +57,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
 
   @media screen and (min-width: @desktop-width) {
     max-width: 1200px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
   }
 }
 
@@ -99,6 +108,10 @@
 .gallery__item--top {
   @media screen and (min-width: @tablet-width) {
     width: 100%;
+    margin-bottom: 45px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
     margin-bottom: 50px;
   }
 }
@@ -164,6 +177,7 @@
   }
 
   @media screen and (min-width: @desktop-width) {
+    top: 50px;
     right: 130px;
   }
 }
@@ -179,8 +193,13 @@
     display: flex;
     flex-direction: column;
     max-width: 300px;
-    min-height: 150px;
+    min-height: 148px;
     padding: 20px 30px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    min-height: 150px;
+    padding-top: 23px;
   }
 }
 
@@ -191,6 +210,7 @@
   @media screen and (min-width: @tablet-width) {
     width: 94%;
     min-height: 120px;
+    padding: 29px 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -200,7 +220,8 @@
 
   @media screen and (min-width: @desktop-width) {
     width: 78.5%;
-    min-height: 96px;
+    min-height: 92px;
+    padding: 20px 30px;
   }
 }
 

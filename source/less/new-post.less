@@ -21,7 +21,7 @@
   @media screen and (min-width: @desktop-width) {
     grid-template-columns: 300px 1fr;
     column-gap: 90px;
-    padding: 40px 60px 57px 80px;
+    padding: 51px 60px 57px 80px;
     background-color: rgb(242, 242, 242);
   }
 }
@@ -57,8 +57,13 @@
   border-bottom: 1px solid rgba(40, 54, 69, 0.1);
 
   @media screen and (min-width: @tablet-width) {
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 0px;
     border-bottom: none;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -88,7 +93,7 @@
 
   @media screen and (min-width: @tablet-width) {
     width: 93%;
-    margin-bottom: 31px;
+    margin-bottom: 27px;
   }
 
   @media screen and (min-width: @desktop-width) {
