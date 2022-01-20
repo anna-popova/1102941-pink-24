@@ -74,9 +74,24 @@
   color: @blue;
 
   @media screen and (min-width: @desktop-width) {
+    width: 575px;
     margin-bottom: 28px;
     font-size: 18px;
     line-height: 1.7;
+  }
+}
+
+.article__desktop-br {
+  display: none;
+
+  @media screen and (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.article__tablet-br {
+  @media screen and (min-width: @desktop-width) {
+    display: none;
   }
 }
 
