@@ -1,13 +1,19 @@
 .page-header {
-  position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: @blue;
 
   @media screen and (min-width: @desktop-width) {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     padding-right: 130px;
   }
+}
+
+.page-header--js-enabled {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .page-header__wrapper {
@@ -25,7 +31,7 @@
   @media screen and (min-width: @desktop-width) {
     max-width: 1200px;
     margin: 0 auto;
-    padding-right: 130px;
+    padding-right: 104px;
     padding-left: 350px;
   }
 }
