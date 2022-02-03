@@ -37,6 +37,21 @@
   }
 }
 
+.main-nav__toggle--js-enabled {
+  display: block;
+
+  @media screen and (min-width: @desktop-width) {
+    display: none;
+  }
+
+  // NOTE! Это костыль
+  // TODO: вынести кнопку в блок page header и изменить название класса и стили
+  z-index: 100;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
 .main-nav__toggle--close {
   width: 23px;
   height: 23px;
@@ -103,6 +118,10 @@
 
 .main-nav__list--js-enabled {
   position: absolute;
+
+  @media screen and (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .main-nav__list--open {
