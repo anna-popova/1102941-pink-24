@@ -5,12 +5,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // NOTE! Если включен javascript добавить эти классы
   // - класс 'site-list__item--js-enabled' элементам site-list__item
   // - класс 'page-header--js-enabled' элементу page-header
+  // - класс 'main-nav__list--js-enabled' элементу main-nav
+  // - класс 'page-header__wrapper--js-enabled' элементу page-header-wrapper
   //
   const listItems = document.getElementsByClassName("site-list__item");
   for (const listItem of listItems) {
     listItem.classList.add('site-list__item--js-enabled');
   }
   document.getElementById("page-header").classList.add('page-header--js-enabled');
+  document.getElementById("main-nav").classList.add('main-nav__list--js-enabled');
+  document.getElementById("page-header-wrapper").classList.add('page-header__wrapper--js-enabled');
 
   var isOpen = false;
   var button = document.getElementById('nav-btn');
