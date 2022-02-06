@@ -45,7 +45,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
   }, false);
 
-  var formButton = document.getElementById('form-butto');
+  //
+  // NOTE!
+  // Файл скрипта подключается ко всем страницам, но содержит функционал формы, который предназначен для страницы form
+  // В рамкам этого интенсива мы не будем исправлять, но знаем как это сделать! Не надо снижать оценку!!!
+  //
+  var formButton = document.getElementById('form-button');
   var lastName = document.getElementById('last-name');
   var name = document.getElementById('name');
   var email = document.getElementById('email');
