@@ -19,6 +19,11 @@
 <body class="page__body">
 
   <header id="page-header" class="page-header">
+    <!--
+     NOTE! Чтобы переключить состояние меню и внешний вид кнопки,
+     добавить класс 'page-header__wrapper--bg' элементу page-header-wrapper
+     Соответственно, закрыть меню - убрать класс
+    -->
     <div id="page-header-wrapper" class="page-header__wrapper">
       <a class="page-header__logo" href="index.html"><span class="visually-hidden">Логотип приложения PINK</span>
         <svg class="page-header__pink-logo page-header__pink-logo--visible-phone" width="74" height="23"
@@ -88,12 +93,21 @@
             fill="#d22856"></path>
         </svg>
       </a>
+      <!--
+       NOTE! Чтобы переключить состояние меню и внешний вид кнопки,
+       добавить класс 'page-header__toggle--close' элементу nav-btn
+       Соответственно, закрыть меню - убрать класс
+      -->
+      <button id="nav-btn" class="page-header__toggle" type="button"><span class="visually-hidden">Открыть
+            меню</span></button>
     </div>
     <nav class="page-header__nav main-nav">
-      <button id="nav-btn" class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть
-            меню</span></button>
       <div class="main-nav__wrapper">
-        <!--main-nav__list--open раскрывает мобильное меню. при удалении этого класса, меню скрывается-->
+        <!--
+         NOTE! Чтобы переключить состояние меню и внешний вид кнопки,
+         добавить класс 'main-nav__list--open' элементу main-nav
+         Соответственно, закрыть меню - убрать класс
+        -->
         <ul id="main-nav" class="main-nav__list main-nav__list--open site-list">
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Фотографии</a></li>
