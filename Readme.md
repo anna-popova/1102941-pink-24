@@ -1,58 +1,52 @@
 # Личный проект «Пинк» 
 
-* Студент: [Anna](https://up.htmlacademy.ru/adaptive/24/user/1102941).
-* Наставник: `Вадим Канинский`.
 
----
+## О проекте
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+* Сделаны мобильная, планшетная и десктопная версии всех страниц сайта
+* Реализована адаптивность графики: ретинизация, векторные изображения
+* Использована методология БЭМ
+* Использован препроцессор Less
+* Использован инструмент автоматизации Gulp
 
-Полезный файл:
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+## Участники проекта
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+* Студент: Попова Анна - [telegram](https://t.me/naprimer_anika)
+* Наставник: Вадим Канинский - [vadimcpp.ru](https://vadimcpp.ru/), [telegram](https://t.me/vadimcpp)
 
----
 
-### Памятка
+## Демо
 
-#### 1. Зарегистрируйтесь на Гитхабе
+<!-- TODO! Добавить мою ссылку -->
+Пройти по ссылке: 
+<!-- Пройти по ссылке: https://vadimcpp.github.io/six-cities/ -->
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+<img width="945" alt="pink" src="https://user-images.githubusercontent.com/61383401/153154098-5dd2a338-e003-4ce2-9a77-98abf9957b51.png">
 
-#### 2. Создайте форк
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1102941-pink-24) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+## Как запустить код?
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808088-259e3a80-a190-11e9-98f7-3c0edd9740f5.jpg">
+Открыть терминал и выполнить последовательно команды:
 
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808087-2505a400-a190-11e9-8caa-2e7584c702cc.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808090-259e3a80-a190-11e9-8a64-c58d94803b73.jpg">
-
-Клонировать репозиторий можно так:
-
+<!-- TODO! Отредактировать команды -->
 ```
-git clone SSH-адрес_вашего_форка
+git clone https://github.com/VadimCpp/six-cities.git six-cities-demo
+cd six-cities-demo
+git checkout offline
+cd project
+npm install
+npm start
 ```
 
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
+## Благодарности
 
-#### 4. Начинайте обучение!
+Большое спасибо [наставнику](https://vadimcpp.ru/) за совместную плодотворную работу, кураторам за поддержку, [HTML Academy](https://htmlacademy.ru) за полученные знания!
 
----
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
+## Результат
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+Проект получил оценку ***отлично*** на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
 
-[check-image]: https://github.com/htmlacademy-adaptive/1102941-pink-24/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-adaptive/1102941-pink-24/actions
+![cert](https://user-images.githubusercontent.com/61383401/153157361-08c2937c-2908-4b8e-ae77-fe5aec3eafa0.JPG)
+
