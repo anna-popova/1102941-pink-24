@@ -27,12 +27,9 @@
 
 Открыть терминал и выполнить последовательно команды:
 
-<!-- TODO! Отредактировать команды -->
 ```
-git clone https://github.com/VadimCpp/six-cities.git six-cities-demo
-cd six-cities-demo
-git checkout offline
-cd project
+git clone https://github.com/anna-popova/1102941-pink-24.git pink-demo
+cd pink-demo
 npm install
 npm start
 ```
