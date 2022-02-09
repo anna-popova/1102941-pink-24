@@ -18,9 +18,7 @@
 
 ## Демо
 
-<!-- TODO! Добавить мою ссылку -->
-Пройти по ссылке: 
-<!-- Пройти по ссылке: https://vadimcpp.github.io/six-cities/ -->
+Пройти по ссылке: https://anna-popova.github.io/1102941-pink-24/
 
 <img width="945" alt="pink" src="https://user-images.githubusercontent.com/61383401/153154098-5dd2a338-e003-4ce2-9a77-98abf9957b51.png">
 
