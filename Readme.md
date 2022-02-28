@@ -16,6 +16,11 @@
 * Наставник: Вадим Канинский - [vadimcpp.ru](https://vadimcpp.ru/), [telegram](https://t.me/vadimcpp)
 
 
+## Дизайн проекта
+
+Верстка выполнена в полном соответствии с [макетом](https://www.figma.com/file/7GSwKLooA4WOPpsxxZJHY2/HTML-2-%2F-%D0%9F%D0%B8%D0%BD%D0%BA-(24)?node-id=1%3A323) .
+
+
 ## Демо
 
 Пройти по ссылке: https://anna-popova.github.io/1102941-pink-24/
